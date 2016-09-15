@@ -1,0 +1,28 @@
+$sportbox-title-background: #00839c;
+.eai-scores {
+	.eai-scores-titlebox {
+		width: 100%;
+		background-color: $sportbox-title-background;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		// below probably need some media size styling ....
+		margin-left: -18px;
+		padding-left: 18px;
+		padding-right: 18px;
+		margin-top: -1px;
+		h3 {
+			color: white;
+			text-align: center;
+		}
+	}
+	.prl-article-title {
+		margin-top: 10px;
+	}
+	.scores-more-link {
+		padding-top: 10px;
+		float: right;
+	}
+	.scores-more-link:after {
+		content: " >>> ";
+	}
+} 

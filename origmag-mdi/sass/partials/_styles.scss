@@ -1,0 +1,440 @@
+/* ********* sytles ******** */
+.nowrap {
+	white-space: nowrap;
+}
+em {
+	font-style: italic;
+}
+
+header#masthead {
+	#topnav {
+		float: right;
+		#top-menu {
+			li a {
+				//line-height: 30px;
+			}
+		}
+	}
+	.prl-container {
+		.masthead-bg {
+			background-color: white;
+			line-height: 30px;
+			.prl-header-logo {
+				padding: 5px 0px 0px 0px;//12px 0px 0px 0px;
+				//padding-top: 12px;
+
+				background-color: white!important;
+				width: 100%;
+				text-align: center;
+				.prl-logo-time {
+					height: 40px;
+				}
+			}
+			.prl-header-mid {
+				float: left;
+				padding-left: 35%; //40%;
+				color: $fontcolor;
+				.prl-header-time {
+					margin-left: 0px;
+					.fa.fa-calendar {
+						padding-right: 10px;
+					}
+				}
+				
+			}
+			.prl-header-social {
+				float:right;
+				a.fa.fa-facebook {
+					color: #3664A2;
+				}
+				a.fa.fa-twitter {
+					color: #55ACEE;
+				}
+				a.youtube-pic img {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	
+}
+#search_form-top.nav_search {
+	display:block;
+}
+#search_form.nav_search {
+	display: none;
+}
+#search_form.nav_search, 
+#search_form-top.nav_search {
+	input {
+		border: 1px solid $borderltgrey;
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;
+	}
+}
+.centered-menu {
+	ul {
+
+		li {
+	
+			 a {
+			
+			}
+		}
+	}
+}
+#nav.prl-navbar {
+	margin-bottom: 15px;
+	.prl-container .nav-wrapper {
+		border-top: 1px solid $borderltgrey;
+	}
+	#sf-menu {
+		padding-left: 5%; // tbd zig....
+	}
+	#sf-menu li a {
+		font-size: 15px;
+	}
+}
+.sf-mega .prl-article-title a {
+	font-size: 16px;
+}
+#single-top-ad {
+	margin-bottom: 10px;
+}
+.ads_top {
+	margin-bottom :0px;
+}
+/* stuff for breaking News */
+.eai-breaking-news {
+	margin-bottom: 10px!important;
+	//background-color: red;
+	width: 100%;
+	.mtphr-dnt-title {
+		margin-bottom: 0px;
+		padding-bottom: 1px;
+		border-bottom: 1px solid #CCC
+		//border: 1px solid #CCC
+	}
+	.mtphr-dnt-tick-container {
+		.mtphr-dnt-tick-contents {
+			padding-top: 4px; /*make text line up with header  */
+			background-color: $breakingnews-background;
+			border: 1px solid #DDD;
+		}
+	}
+}
+#main {
+	border-left: 0px;
+}
+#mainFlexslider {
+	border: 0px;
+}
+.single-meta {
+	.prl-article-meta {
+		float:left;
+	}
+	ul.prl-list.prl-list-sharing {
+		float:right;
+		margin-top: 0px;
+		li {
+			display: inline;
+		}
+	}
+}
+/** related posts styling */
+.yarpp-thumbnails-horizontal, .yarpp-thumbnails-vertical {
+	.yarpp-related {
+		ul {
+			list-style-type: none;
+		}
+	}
+}
+.yarpp-thumbnails-vertical {
+	float: left;
+	.yarpp-related {
+		ul {
+			width: 90%;
+
+			padding-left: 0px;
+			li:not(:last-child) {
+				padding-bottom: 5px;
+				margin-bottom: 5px;
+				border-bottom: 1px solid $bordergrey; 
+				
+			}
+			li {
+				.yarpp-thumbnail img {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+.yarpp-thumbnails-horizontal {
+	.yarpp-related {
+		ul {
+			li {
+				width: 25%;
+				display: inline-block;
+				vertical-align: top;
+				.yarpp-thumbnail img {
+				
+				}
+			}
+		}
+	}
+}
+// testing menu 
+
+.sf-menu li:not(.sf-mega-parent) li a {
+	// background-color: red!important; // this gets us there.
+}
+//.sf-menu li:not(.sf-mega-parent) ul.sub-menu {
+.sf-menu li.eai-menu-top ul.sub-menu {
+	background-color:#FFF;
+	li a {
+	}
+	li.eai-menuheading {
+		a {
+			font-weight:bold;
+			text-decoration: underline;
+		}
+	}
+	li:not(.eai-menuheading) {
+		padding-left: 20px;
+	}
+}
+
+.ad-container {
+	span  { display: inline-block; width: 100%; height: auto; }
+	a { display: inline-block; width: 100% !important; height: auto !important; }
+	img { width: 100%; height: auto !important; }
+}
+a.eai-more-link {
+	text-align: right;
+}
+aside {
+	.widget .widget-title { /* copied from .prl-block-title */
+		color: $widget-titlecolor;
+		margin: 0;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		border-bottom: 3px solid #DDD;
+		border-top: 1px solid #DDD;
+		padding: 10px 0;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		a {
+			color: $widget-titlecolor;
+		}
+	}
+}
+#sidebar{
+	float:left;
+}
+#sidebar ul {
+	padding-left: 0px;
+
+}
+aside .widget .widget-title, 
+aside .widget .prl-block-title {
+	text-align: center;
+	font-size: 16px;
+}
+/* *** smug mug widget styling *** */
+#zsfw-authors {
+	width: initial;
+	.zimg img {
+		width: 100%;
+	}
+	.bx-wrapper {
+		margin-bottom: 30px;
+	}
+}
+/* *** end smugmug widget styling *** */
+
+/* **** sytling for Biz text ad's widget ****z  */
+//on BOTH sidebar & beneath content */
+ul.zbzdir-biz-list {
+	padding-left: 0px;
+}
+aside .widget-zbtlist { 
+	ul.zbt-ad-list {
+		padding-left: 0px;
+		
+		.zbt-title {
+			//font-size: 14px;
+			font-size: 16px;
+			//font-weight: bold;
+			display: block;
+		}
+		.zbt-content {
+			display: block;
+		}
+		.zbt-ad-link {
+			font-size: 12px;
+		}
+	}
+
+}
+// just on sidebar
+#sidebar aside.widget-zbtlist  {
+	ul.zbt-ad-list li {
+		 	border-bottom: 1px solid $borderltgrey;
+		}
+}
+// just beneath content
+.biz-today.horizontal aside.widget-zbtlist  { // styling for business today ads underneath content */
+	float: left;
+	border-bottom: 1px solid $borderltgrey;
+	.widget-title {
+		text-align: center;
+	}
+	ul.zbt-ad-list  {
+		float: left;
+		padding-left: 0px;
+		//max-height: 340px;
+		//overflow: hidden;
+		li {
+			border-left: 1px solid $borderltgrey;
+			width: 30%;
+			float: left;
+			padding-left: 2%;
+			padding-right: 1%;
+			.zbt-title {
+				//font-size: 14px;
+				//font-weight: bold;
+				display: block;
+				height: 35px;
+				
+			}
+			.zbt-content {
+				display: block;
+			}
+			.zbt-ad-link {
+				font-size: 12px;
+				float: left;
+				text-align: right;
+				width: 100%;
+			}
+		}
+		li:first-child {
+			padding-left: 0px;
+			border-left: 0px;
+		}	
+		li:last-child {
+			padding-right: 0px;
+		}
+	}
+	
+}
+.biz-today.horizontal aside.widget-zbzdir-list  { // styling for business today ads underneath content */
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid $borderltgrey;
+	.widget-title {
+		text-align: center;
+	}
+	ul.zbzdir-biz-list {
+		width: 100%;
+		float: left;
+		padding-left: 0px;
+		li {
+			border-left: 1px solid $borderltgrey;
+			width: 30%;
+			float: left;
+			padding-left: 2%;
+			padding-right: 2%;
+		} 
+		li:first-child {
+			padding-left: 0px;
+			border-left: 0px;
+		}	
+		li:last-child {
+			padding-right: 0px;
+		}
+	}
+	
+}
+/** end text-ads /biz toda ads 
+
+/* **** sidebar styling with boxes & icons *** */
+// add the border
+#sidebar .widget_advanced_menu,
+#sidebar .widget-recent-post,
+#sidebar .widget_awesomeweatherwidget, 
+#sidebar .widget-zbtlist,
+#sidebar .widget_hcclist,
+#sidebar #zsfw-authors {
+	padding-top: 8px;
+	padding-bottom: 5px;
+	border: 2px solid $borderdkgrey;
+	margin-left: -15px;
+	padding-left: 15px;
+	margin-right: -15px;
+	padding-right: 15px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+}
+// some widgets dont need extra padding....
+#sidebar .widget_awesomeweatherwidget {
+	padding-bottom: 0px;
+}
+// the icons & styling, some are css'd with before::  & some have an icon in the widget.
+#sidebar .widget_advanced_menu.icon-home::before {
+	content: "\F015"; // home
+}
+#sidebar .widget_advanced_menu.icon-trophy::before {
+		content: "\F091"; // trophy
+}
+
+#sidebar .widget-recent-post::before {
+	content: "\f1ea"; // fa-newspaper-o (new in 4.2)
+}
+#sidebar .widget_hcclist::before {
+	content: "\f073"; // fa-calendar
+}
+#sidebar .widget_awesomeweatherwidget::before {
+		content: "\f185"; //fa-sun-o 
+	}
+#sidebar .widget-zbtlist::before {
+	content: "\f0f2"; // fa-suitcase
+}
+#sidebar .widget_advanced_menu.icon-trophy::before,
+#sidebar .widget_advanced_menu.icon-home::before,
+#sidebar .widget-recent-post::before,
+#sidebar .widget_hcclist::before,
+#sidebar .widget_awesomeweatherwidget::before,
+#sidebar  .widget-zbtlist::before {
+	font-family:FontAwesome;
+	margin-left: -25px;
+	float: left;
+	background-color: $bkgoundContent;
+	font-size: 24px;
+	margin-top: 10px;
+}
+#sidebar .widget_awesomeweatherwidget > i, 
+#sidebar .widget-zbtlist > i, 
+#sidebar .widget_hcclist > i, 
+#sidebar #zsfw-authors	> i {
+	margin-top: 10px;
+	margin-left: -25px;
+	background-color: $bkgoundContent;
+	float: left;
+	font-size: 24px;
+}
+// feature image caption on single post
+.cc-featured-image-caption {
+	font-size: 12px;
+}
+.cc-featured-image-caption-source {
+	float: right;
+	color: $photo-credit-color;
+	font-style: italic;
+}
+
+/* *** END sidebar styling *** */

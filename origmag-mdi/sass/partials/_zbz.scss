@@ -1,0 +1,53 @@
+/********* start styling for biz pull from local **********/
+// for both horizontal & sidebar
+.widget-zbzdir-list { 
+	float: left;
+	border-bottom: 1px solid $borderltgrey;
+	.zbzdir-title {
+		text-align: center;
+		a {
+			color: $mdilinkcolor
+		}
+	}
+}
+
+// this is just for the horizontal version in the biz-today widget area at bottom of post
+.biz-today.horizontal {
+	.widget-zbzdir-list { 
+		ul.zbzdir-biz-list {
+			padding-left: 0px;
+			li.zbzdir-biz-listitem {
+				vertical-align: top;
+				.zbzdir-biz-link {
+					.zbzdir-biz { // background image here.
+						border-radius: 3px;	
+					}
+				}
+				.zbzdir-biz-link:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+// 
+@media only screen and (min-width:480px) { // 2 across on size bigger than...
+	.biz-today.horizontal {
+		ul.zbzdir-biz-list {
+			li.zbzdir-biz-listitem {
+				width: 49%; // two across
+				display: inline-block;
+				.zbzdir-biz-link {
+					.zbzdir-biz { // background image here.
+						min-height: 120px;
+					}
+				}
+			}
+			li.zbzdir-biz-listitem:first-child {
+				padding-right: 2%;
+			}
+		}
+	}
+}
+
+/********* start styling for biz pull from local  **********/

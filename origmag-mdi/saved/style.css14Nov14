@@ -1,0 +1,597 @@
+@import url("../original/style.css");
+/*  
+	Theme Name: MDI - orig
+	Theme URI: http://www.reachmaine.com/
+	Description: Original Mag Template for the MDIslander
+	Version: 2.0.7
+	Author: LSpeight, Reach Marketing
+	Author URI: http://www.reachmaine.com/
+	License: GNU General Public License
+	License URI: license.txt
+	Template: original
+*/
+/* Colors ---------------------------------------------- */
+/* Typography ------------------------------------------ */
+/* ********* sytles ******** */
+.nowrap {
+  white-space: nowrap; }
+
+em {
+  font-style: italic; }
+
+header#masthead #topnav {
+  float: right; }
+header#masthead .prl-container .masthead-bg {
+  background-color: white;
+  line-height: 30px; }
+  header#masthead .prl-container .masthead-bg .prl-header-logo {
+    padding: 5px 0px 0px 0px;
+    background-color: white !important;
+    width: 100%;
+    text-align: center; }
+    header#masthead .prl-container .masthead-bg .prl-header-logo .prl-logo-time {
+      height: 40px; }
+  header#masthead .prl-container .masthead-bg .prl-header-mid {
+    float: left;
+    padding-left: 40%;
+    color: #333333; }
+    header#masthead .prl-container .masthead-bg .prl-header-mid .prl-header-time {
+      margin-left: 0px; }
+      header#masthead .prl-container .masthead-bg .prl-header-mid .prl-header-time .fa.fa-calendar {
+        padding-right: 10px; }
+  header#masthead .prl-container .masthead-bg .prl-header-social {
+    float: right; }
+    header#masthead .prl-container .masthead-bg .prl-header-social a.fa.fa-facebook {
+      color: #3664A2; }
+    header#masthead .prl-container .masthead-bg .prl-header-social a.fa.fa-twitter {
+      color: #55ACEE; }
+    header#masthead .prl-container .masthead-bg .prl-header-social a.youtube-pic img {
+      vertical-align: middle; }
+
+#search_form-top.nav_search {
+  display: block; }
+
+#search_form.nav_search {
+  display: none; }
+
+#search_form.nav_search input,
+#search_form-top.nav_search input {
+  border: 1px solid #dddddd;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit; }
+
+#nav.prl-navbar {
+  margin-bottom: 15px; }
+  #nav.prl-navbar .prl-container .nav-wrapper {
+    border-top: 1px solid #dddddd; }
+  #nav.prl-navbar #sf-menu {
+    padding-left: 5%; }
+  #nav.prl-navbar #sf-menu li a {
+    font-size: 15px; }
+
+.sf-mega .prl-article-title a {
+  font-size: 16px; }
+
+#single-top-ad {
+  margin-bottom: 10px; }
+
+.ads_top {
+  margin-bottom: 0px; }
+
+/* stuff for breaking News */
+.eai-breaking-news {
+  margin-bottom: 10px !important;
+  width: 100%; }
+  .eai-breaking-news .mtphr-dnt-title {
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #cccccc; }
+  .eai-breaking-news .mtphr-dnt-tick-container .mtphr-dnt-tick-contents {
+    padding-top: 4px;
+    /*make text line up with header  */
+    background-color: #f2f4f8;
+    border: 1px solid #DDD; }
+
+#main {
+  border-left: 0px; }
+
+#mainFlexslider {
+  border: 0px; }
+
+.single-meta .prl-article-meta {
+  float: left; }
+.single-meta ul.prl-list.prl-list-sharing {
+  float: right;
+  margin-top: 0px; }
+  .single-meta ul.prl-list.prl-list-sharing li {
+    display: inline; }
+
+/** related posts styling */
+.yarpp-thumbnails-horizontal .yarpp-related ul, .yarpp-thumbnails-vertical .yarpp-related ul {
+  list-style-type: none; }
+
+.yarpp-thumbnails-vertical {
+  float: left; }
+  .yarpp-thumbnails-vertical .yarpp-related ul {
+    width: 90%;
+    padding-left: 0px; }
+    .yarpp-thumbnails-vertical .yarpp-related ul li:not(:last-child) {
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #bdbdbd; }
+    .yarpp-thumbnails-vertical .yarpp-related ul li .yarpp-thumbnail img {
+      margin-top: 5px; }
+
+.yarpp-thumbnails-horizontal .yarpp-related ul li {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top; }
+
+.sf-menu li.eai-menu-top ul.sub-menu {
+  background-color: #FFF; }
+  .sf-menu li.eai-menu-top ul.sub-menu li.eai-menuheading a {
+    font-weight: bold;
+    text-decoration: underline; }
+  .sf-menu li.eai-menu-top ul.sub-menu li:not(.eai-menuheading) {
+    padding-left: 20px; }
+
+.ad-container span {
+  display: inline-block;
+  width: 100%;
+  height: auto; }
+.ad-container a {
+  display: inline-block;
+  width: 100% !important;
+  height: auto !important; }
+.ad-container img {
+  width: 100%;
+  height: auto !important; }
+
+a.eai-more-link {
+  text-align: right; }
+
+aside .widget .widget-title {
+  /* copied from .prl-block-title */
+  color: #1e73be;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 3px solid #DDD;
+  border-top: 1px solid #DDD;
+  padding: 10px 0;
+  text-transform: uppercase;
+  margin-bottom: 15px; }
+  aside .widget .widget-title a {
+    color: #1e73be; }
+
+#sidebar {
+  float: left; }
+
+#sidebar ul {
+  padding-left: 0px; }
+
+aside .widget .widget-title,
+aside .widget .prl-block-title {
+  text-align: center;
+  font-size: 16px; }
+
+/* *** smug mug widget styling *** */
+#zsfw-authors {
+  width: initial; }
+  #zsfw-authors .zimg img {
+    width: 100%; }
+  #zsfw-authors .bx-wrapper {
+    margin-bottom: 30px; }
+
+/* *** end smugmug widget styling *** */
+/* **** sytling for Biz text ad's widget ****  */
+aside .widget-zbtlist ul.zbt-ad-list {
+  padding-left: 0px; }
+  aside .widget-zbtlist ul.zbt-ad-list .zbt-title {
+    font-size: 16px;
+    display: block; }
+  aside .widget-zbtlist ul.zbt-ad-list .zbt-content {
+    display: block; }
+  aside .widget-zbtlist ul.zbt-ad-list .zbt-ad-link {
+    font-size: 12px; }
+
+.biz-today.horizontal aside.widget-zbtlist {
+  float: left;
+  border-bottom: 1px solid #dddddd; }
+  .biz-today.horizontal aside.widget-zbtlist .widget-title {
+    text-align: center; }
+  .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list {
+    float: left;
+    padding-left: 0px; }
+    .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li {
+      border-left: 1px solid #dddddd;
+      width: 30%;
+      float: left;
+      padding-left: 2%;
+      padding-right: 1%; }
+      .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li .zbt-title {
+        display: block;
+        height: 35px; }
+      .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li .zbt-content {
+        display: block; }
+      .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li .zbt-ad-link {
+        font-size: 12px;
+        float: left;
+        text-align: right;
+        width: 100%; }
+    .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li:first-child {
+      padding-left: 0px;
+      border-left: 0px; }
+    .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li:last-child {
+      padding-right: 0px; }
+
+/** end text-ads /biz toda ads 
+
+/* **** sidebar styling with boxes & icons *** */
+#sidebar .widget_advanced_menu,
+#sidebar .widget-recent-post,
+#sidebar .widget_awesomeweatherwidget,
+#sidebar .widget-zbtlist,
+#sidebar .widget_hcclist,
+#sidebar #zsfw-authors {
+  padding-top: 8px;
+  padding-bottom: 5px;
+  border: 2px solid gray;
+  margin-left: -15px;
+  padding-left: 15px;
+  margin-right: -15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding-bottom: 10px; }
+
+#sidebar .widget_awesomeweatherwidget {
+  padding-bottom: 0px; }
+
+#sidebar .widget_advanced_menu.icon-home::before {
+  content: "\F015"; }
+
+#sidebar .widget_advanced_menu.icon-trophy::before {
+  content: "\F091"; }
+
+#sidebar .widget-recent-post::before {
+  content: "\f1ea"; }
+
+#sidebar .widget_hcclist::before {
+  content: "\f073"; }
+
+#sidebar .widget_awesomeweatherwidget::before {
+  content: "\f185"; }
+
+#sidebar .widget-zbtlist::before {
+  content: "\f0f2"; }
+
+#sidebar .widget_advanced_menu.icon-trophy::before,
+#sidebar .widget_advanced_menu.icon-home::before,
+#sidebar .widget-recent-post::before,
+#sidebar .widget_hcclist::before,
+#sidebar .widget_awesomeweatherwidget::before,
+#sidebar .widget-zbtlist::before {
+  font-family: FontAwesome;
+  margin-left: -25px;
+  float: left;
+  background-color: white;
+  font-size: 24px;
+  margin-top: 10px; }
+
+#sidebar .widget_awesomeweatherwidget > i,
+#sidebar .widget-zbtlist > i,
+#sidebar .widget_hcclist > i,
+#sidebar #zsfw-authors > i {
+  margin-top: 10px;
+  margin-left: -25px;
+  background-color: white;
+  float: left;
+  font-size: 24px; }
+
+.cc-featured-image-caption {
+  font-size: 12px; }
+
+.cc-featured-image-caption-source {
+  float: right;
+  color: #999999;
+  font-style: italic; }
+
+/* *** END sidebar styling *** */
+.party-R {
+  color: #dd3333;
+  font-weight: bold; }
+
+.party-D {
+  color: #1e73be;
+  font-weight: bold; }
+
+.eai-resultsrace-wrapper {
+  border-bottom: 1px solid #333;
+  margin-bottom: 10px; }
+
+ul.eai-results-sum li {
+  list-style: none; }
+
+table.eai-results {
+  width: auto; }
+  table.eai-results th {
+    color: #333;
+    font-size: 16px;
+    line-height: 18px; }
+  table.eai-results td, table.eai-results th {
+    width: 180px; }
+  table.eai-results tr.eai-results-headerrow {
+    border-bottom: 1px solid #333; }
+  table.eai-results tr.eai-results-totalrow {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333; }
+
+.eai-results-unofficial {
+  color: red; }
+
+.eai-result-votes, .eia-result-totals {
+  text-align: right; }
+
+.eia-result-totals {
+  font-weight: bold;
+  border-bottom: 1px solid grey; }
+
+.eai-resultsum-wrapper {
+  padding-top: 10px;
+  border-bottom: 1px solid grey; }
+  .eai-resultsum-wrapper .eai-racesummary-grx {
+    width: 450px;
+    float: left; }
+
+.eai-resultsrace-wrapper .eai-racesum {
+  float: left;
+  width: 100%; }
+  .eai-resultsrace-wrapper .eai-racesum .eai-race-vote-pie {
+    float: left; }
+    .eai-resultsrace-wrapper .eai-racesum .eai-race-vote-pie .eai-race-grx {
+      width: 300px; }
+  .eai-resultsrace-wrapper .eai-racesum .eai-voter-partcip {
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .eai-resultsrace-wrapper .eai-racesum .eai-voter-partcip .eai-voter-precent {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 0px; }
+    .eai-resultsrace-wrapper .eai-racesum .eai-voter-partcip .eai-voter-title {
+      text-align: center; }
+  .eai-resultsrace-wrapper .eai-racesum .vote-count {
+    float: left;
+    width: 25%; }
+  .eai-resultsrace-wrapper .eai-racesum .eai-precincts-reporting {
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .eai-resultsrace-wrapper .eai-racesum .eai-precincts-reporting .eai-precincts-title {
+      text-align: center; }
+    .eai-resultsrace-wrapper .eai-racesum .eai-precincts-reporting .eai-precincts-precent {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 0px; }
+  .eai-resultsrace-wrapper .eai-racesum .eai-unvoted {
+    float: right; }
+    .eai-resultsrace-wrapper .eai-racesum .eai-unvoted .eai-voter-grx {
+      float: right;
+      width: 300px; }
+.eai-resultsrace-wrapper .eai-results-race-details {
+  border-top: 1px solid grey;
+  clear: both; }
+
+.eai-resultsimple-wrapper {
+  width: 30%;
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid grey;
+  height: 160px; }
+  .eai-resultsimple-wrapper .eai-results-sum {
+    margin-bottom: 5px; }
+  .eai-resultsimple-wrapper p {
+    margin-bottom: 0px; }
+
+.eai-checkback {
+  color: #D33; }
+
+/********* start styling for Google Custom Seach **********/
+.nav_search.eai-gsc-nav,
+.search_form-top-gcs.eai-gsc-nav {
+  width: 300px;
+  float: right;
+  padding-top: 0px;
+  line-height: 14px; }
+  .nav_search.eai-gsc-nav input.gsc-search-button-v2,
+  .search_form-top-gcs.eai-gsc-nav input.gsc-search-button-v2 {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+input.gsc-search-button-v2 {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/********* end  styling for Google Custom Seach **********/
+/* =Theme customization starts here */
+#sliderTab {
+  background-color: #0d365a; }
+  #sliderTab .slider_content .slider_title {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #0d365a 100%); }
+
+/* the Author tabs section at bottom of single posts */
+#ts-fab-below div.ts-fab-tabs div.ts-fab-tab {
+  border-color: #DDD; }
+
+#ts-fab-bio-archive {
+  display: block;
+  margin-bottom: 20px;
+  border-color: #DDD; }
+
+/*  tag column page-builder blocks */
+.tag-cat.obits, .archive-cat.obits {
+  width: 100%;
+  height: 20px;
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+  margin-top: 3px; }
+
+.tag-cat.obits:before, .archive-cat.obits:before {
+  content: "In Memorium"; }
+
+.prl-list-category .list-thumbnail {
+  margin-bottom: 0px; }
+
+/* Footer/COPYRIGHT */
+#footer .footer-widget {
+  padding-top: 10px;
+  background-color: #333333; }
+  #footer .footer-widget .prl-block-title {
+    border-color: #444;
+    color: #00829b;
+    text-align: center;
+    border-top: 0px;
+    font-size: 14px; }
+  #footer .footer-widget .prl-grid-divider:not(:empty) > [class*='prl-span-']:not(.prl-span-12):nth-child(n+2) {
+    border-color: #444; }
+  #footer .footer-widget .prl-span-3 {
+    margin-bottom: 10px; }
+    #footer .footer-widget .prl-span-3 center {
+      padding-bottom: 5px; }
+    #footer .footer-widget .prl-span-3 a {
+      font-size: 14px; }
+#footer .copyright .left {
+  width: auto; }
+
+.zcal_out {
+  width: 40%; }
+  .zcal_out .zcal_date_group, .zcal_out .zcal_city_group {
+    text-align: center; }
+
+/* my calendar width */
+aside .widget_hcclist h2.widgettitle {
+  border-bottom: 1px solid #DDD;
+  text-align: center;
+  padding-bottom: 10px; }
+aside .widget_hcclist ul.hcc_event_list {
+  padding-left: 0px; }
+  aside .widget_hcclist ul.hcc_event_list li.hcc_event {
+    list-style: none;
+    padding-bottom: 10px; }
+    aside .widget_hcclist ul.hcc_event_list li.hcc_event a .hcc_event_title {
+      line-height: 20px;
+      margin-bottom: 3px;
+      font-size: 14px; }
+
+a.more-about-link:before {
+  content: "More About "; }
+
+/* styling the weather widget */
+.widget.widget_awesomeweatherwidget .awesome-weather-wrap {
+  border-color: #1e73be;
+  margin-bottom: 15px; }
+  .widget.widget_awesomeweatherwidget .awesome-weather-wrap .awesome-weather-header {
+    padding: 3px;
+    border-color: #1e73be; }
+  .widget.widget_awesomeweatherwidget .awesome-weather-wrap .awesome-weather-current-temp {
+    padding-top: 5px; }
+  .widget.widget_awesomeweatherwidget .awesome-weather-wrap .awesome-weather-todays-stats {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .widget.widget_awesomeweatherwidget .awesome-weather-wrap .awesome-weather-forecast {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+.widget.widget_awesomeweatherwidget .awesome-weather-forecast-day-icon {
+  font-size: 15px;
+  line-height: 15px; }
+  .widget.widget_awesomeweatherwidget .awesome-weather-forecast-day-icon .wi-day-rain, .widget.widget_awesomeweatherwidget .awesome-weather-forecast-day-icon .wi-day-sunny {
+    font-weight: bold; }
+  .widget.widget_awesomeweatherwidget .awesome-weather-forecast-day-icon .wi-day-sunny {
+    font-weight: bold;
+    color: #FF6700; }
+
+.widget .textwidget .eia-right-rail,
+.widget .textwidget .eai-right-rail {
+  margin-bottom: 35px;
+  -webkit-box-shadow: 7px 15px 33px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 15px 33px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 15px 33px 0px rgba(0, 0, 0, 0.75); }
+
+.flexslider.gallery_slider {
+  float: left; }
+
+/* this should stay at bottom */
+/* ********** media ************ */
+/* All Mobile Sizes (devices and browser) */
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+/* media breakpoints for orig mag:  >1200, max-width:1199px, max-width: 768px */
+@media only screen and (min-width: 1200px) {
+  .widget .textwidget .eia-right-rail,
+  .widget .textwidget .eai-right-rail {
+    width: 300px;
+    margin-left: -30px; } }
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  .hidden-tablet {
+    display: none;
+    visibility: false;
+    margin: 0px;
+    padding: 0px;
+    border: none; }
+
+  .show-tablet {
+    display: block !important;
+    visibility: visible; } }
+@media only screen and (max-width: 768px) {
+  header#masthead .prl-container .masthead-bg .prl-header-mid {
+    padding-left: 0px;
+    float: right; }
+
+  body {
+    font-size: 15px; }
+
+  .prl-container {
+    max-width: 550px; }
+
+  .prl-grid > [class*='prl-span-'] {
+    width: auto;
+    float: none;
+    border: none; }
+
+  .prl-grid .prl-grid > [class*='prl-span-'] {
+    margin-bottom: 20px; }
+
+  .prl-grid .prl-grid > [class*='prl-span-']:last-child {
+    margin-bottom: 0; }
+
+  .prl-grid-divider:not(:empty) > [class*='prl-span-']:not(.prl-span-12):nth-child(n+2) {
+    border: none; } }
+/* #Mobile (Landscape)  (min-width: 480px) and (max-width: 767px) width: 480px   */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .hidden-phone {
+    display: none;
+    visibility: false;
+    margin: 0px;
+    padding: 0px;
+    border: none; } }
+@media only screen and (max-width: 390px) {
+  .wp-caption a img.size-medium {
+    width: 200px; }
+
+  .ts-fab-text {
+    margin-left: 0px; }
+
+  .widget .eia-right-rail,
+  .widget .eai-right-rail {
+    width: 100%; }
+
+  .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li {
+    width: 100%; } }
+/* ********** end media ************ */

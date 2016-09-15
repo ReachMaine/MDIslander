@@ -1,0 +1,221 @@
+/*  
+	Theme Name: MDI - orig
+	Theme URI: http://www.reachmaine.com/
+	Description: Original Mag Template for the MDIslander
+	Version: 2.0.7
+	Author: LSpeight, Reach Marketing
+	Author URI: http://www.reachmaine.com/
+	License: GNU General Public License
+	License URI: license.txt
+	Template: original
+*/
+ 
+@import url("../original/style.css");
+@import "partials/settings";
+@import "partials/styles";
+@import "partials/electionresults";
+@import "partials/gcs"; // google custom search
+@import "partials/leaky"; 
+@import "partials/zbz"; // biz pull from local
+@import "partials/_sportscores"; 
+
+
+/* =Theme customization starts here */
+.wp-caption.alignnone {
+	width: inherit!important;
+}
+#sliderTab {
+	background-color: $slider-background;
+	.slider_content .slider_title {
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,$slider-background 100%);
+	}
+}
+
+/* the Author tabs section at bottom of single posts */
+#ts-fab-below {
+	div.ts-fab-tabs {
+		div.ts-fab-tab {
+			border-color:#DDD;
+		}
+	}
+}
+
+#ts-fab-bio-archive {
+	display: block;
+	margin-bottom: 20px;
+	border-color:#DDD;
+}
+/*  tag column page-builder blocks */
+.tag-thumbnail .prl-thumbnail img {
+	//width: auto;
+	//max-height: 230px;
+}
+.tag-cat.obits, .archive-cat.obits {
+	width: 100%;
+	height: 20px;
+	border-top: 1px solid $bordergrey;
+	border-bottom: 1px solid $bordergrey;
+	margin-top: 3px;
+}
+.tag-cat.obits:before, .archive-cat.obits:before  {
+	content: "In Memoriam";
+}
+
+.prl-list-category .list-thumbnail {
+	margin-bottom: 0px;
+}
+/* Footer/COPYRIGHT */
+
+#footer {
+	.footer-widget {
+		padding-top: 10px;
+		background-color: $footer-widgets-background;
+		.prl-block-title {
+			border-color: #444;
+			color: $linkcolor-bright;
+			text-align: center;
+			border-top: 0px;
+			font-size: 14px;
+		}
+		.prl-grid-divider:not(:empty) > [class*='prl-span-']:not(.prl-span-12):nth-child(n+2) {
+			border-color: #444;
+		}
+		.prl-span-3 {
+			margin-bottom: 10px;
+			center {
+				padding-bottom: 5px;
+			}
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+	.copyright {
+		.left {
+			width: auto; // 
+		}
+	}
+}
+.zcal_out {
+	width: 40%;
+	.zcal_date_group, .zcal_city_group {
+		text-align: center;
+	}
+}
+/* my calendar width */
+aside .widget_hcclist {
+	h2.widgettitle {
+		border-bottom: 1px solid #DDD;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	ul.hcc_event_list {
+		padding-left: 0px;
+		li.hcc_event {
+			list-style: none;
+			padding-bottom: 10px;
+			a {
+				.hcc_event_title {
+					line-height: 20px;
+					margin-bottom: 3px;
+					font-size: 14px;
+				}
+				.hcc_event_venue {
+					
+				}
+				.hcc_event_datetime {
+					
+				}
+			}
+			
+		}
+		li:not(:last-child) {
+			
+		}
+	}
+}
+a.more-about-link:before  {
+	content: "More About "
+}
+/* styling the weather widget */
+.widget.widget_awesomeweatherwidget  {
+	.awesome-weather-wrap {
+		border-color: $weatherborder;
+		margin-bottom: 15px;
+		.awesome-weather-header {
+			padding: 3px;
+			border-color: $weatherborder;
+		}
+		.awesome-weather-current-temp {
+			padding-top: 5px;
+		}
+		.awesome-weather-todays-stats {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.awesome-weather-forecast {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+	}
+	.awesome-weather-forecast-day-icon {
+		font-size: 15px;
+		line-height: 15px;
+		.wi-day-rain, .wi-day-sunny {
+			font-weight: bold;
+		}
+		.wi-day-sunny {
+			font-weight: bold;
+			color: #FF6700;
+		}
+	}
+	
+}
+
+.widget .textwidget .eia-right-rail,
+.widget .textwidget .eai-right-rail  {
+	margin-bottom: 35px;
+	-webkit-box-shadow: 7px 15px 33px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 7px 15px 33px 0px rgba(0,0,0,0.75);
+	box-shadow: 7px 15px 33px 0px rgba(0,0,0,0.75);
+}
+.flexslider.gallery_slider {
+	float: left; 
+}
+
+.flexslider .caption {
+	position: initial;
+}
+.extra-info {
+    background-color: #f0f0f0;
+    outline-color: #007a94;
+    outline-width: medium;
+    outline-style: solid;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.wonderplugingallery-container {
+	clear: both;
+}
+
+/* responsive video embed zig 10May16 */
+.ea-responsive-container {
+	position: relative;
+	padding-bottom: 50.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 1em;
+	iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+	}
+}
+
+/* these should stay at bottom */
+@import "partials/media";
+@import "partials/print";

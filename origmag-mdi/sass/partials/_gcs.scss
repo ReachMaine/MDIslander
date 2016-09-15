@@ -1,0 +1,20 @@
+/********* start styling for Google Custom Seach **********/
+
+// search at top of page - for desktop
+.nav_search.eai-gsc-nav, 
+.search_form-top-gcs.eai-gsc-nav {
+	width: 300px;
+	float: right;
+	padding-top: 0px;
+	line-height: 14px;
+	input.gsc-search-button-v2 {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+input.gsc-search-button-v2 {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/********* end  styling for Google Custom Seach **********/

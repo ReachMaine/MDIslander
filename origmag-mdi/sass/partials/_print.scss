@@ -1,0 +1,8 @@
+/* ** begin print styling ***/
+@media print {
+	.yarpp-thumbnails-horizontal,
+	.yarpp-thumbnails-vertical {
+		display: none;
+	}
+}
+/* ** end print styling ***/

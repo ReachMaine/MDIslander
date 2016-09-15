@@ -1,0 +1,34 @@
+Custom Fields in origmag
+
+custom fields already there.....
+------------------------
+	aa
+	action
+	dvanced_view
+	aq_block_1
+	aq_block_2
+	aq_block_3
+	aq_block_4
+	aq_block_5
+	aq_block_6
+	author_alias
+	autosavenonce
+	auto_draft
+	closedpostboxesnonce
+	comment_status
+	content
+	cur_aa
+	cur_hh
+	cur_jj
+	cur_mm
+	cur_mn
+	EasyPostViewCounter
+	edit_date
+	excerpt
+	hh
+	hidden_aa
+	hidden_hh
+	hidden_jj
+	hidden_mm
+	hidden_mn
+	hidden_post_password

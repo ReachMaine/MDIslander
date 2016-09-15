@@ -1,0 +1,102 @@
+/* ********** media ************ */
+
+
+
+
+/* All Mobile Sizes (devices and browser) */  
+@media only screen and (max-width: 767px) {}   
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */  
+@media only screen and (min-width: 480px) and (max-width: 767px) {}   
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */  
+@media only screen and (max-width: 479px) {}
+ 
+
+/* media breakpoints for orig mag:  >1200, max-width:1199px, max-width: 768px */
+@media only screen and (min-width: 1200px) {
+
+	.widget .textwidget .eia-right-rail,
+	.widget .textwidget .eai-right-rail {
+		width: 300px;
+		margin-left: -30px;
+		//border: 1px solid black;
+	}
+
+}
+/* Smaller than standard 960 (devices and browsers) */  
+@media only screen and (max-width: 959px) { // navigation menu breaks here
+  // uber menu stuff here 
+  nav.ubermenu {
+    display: none;
+    visibility: false;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+  }
+  // end ubermenu
+	
+	.hidden-tablet {
+		display: none;
+		visibility: false;
+		margin: 0px;
+		padding: 0px;
+		border: none;
+	}
+	.show-tablet {
+		display: block!important;
+		visibility: visible;
+	}
+}
+@media only screen and (max-width: 768px) { // span 9/ span3 stack here.
+
+	header#masthead .prl-container .masthead-bg .prl-header-mid {
+		padding-left: 0px;
+		float: right;
+	}
+	 body{font-size: 15px }
+  .prl-container { max-width: 550px; }
+  .prl-grid > [class*='prl-span-']{ width:auto; float: none; border:none; }
+  .prl-grid .prl-grid > [class*='prl-span-']{ margin-bottom: 20px; }
+  .prl-grid .prl-grid > [class*='prl-span-']:last-child { margin-bottom:0;}
+  .prl-grid-divider:not(:empty) > [class*='prl-span-']:not(.prl-span-12):nth-child(n+2) { border:none;  }
+	
+}
+/* #Mobile (Landscape)  (min-width: 480px) and (max-width: 767px) width: 480px   */
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */  
+@media only screen and (max-width: 479px) { 
+	.hidden-phone {
+		display: none;
+		visibility: false;
+		margin: 0px;
+		padding: 0px;
+		border: none;
+	}
+}
+@media only screen and (max-width:390px) {
+  .wp-caption.alignright {
+    width: auto!important;
+    margin-left:0px;
+  }
+  .wp-caption a img.size-medium {
+    width: 200px;
+  }
+  .ts-fab-text {
+      margin-left: 0px;
+    }
+  .widget .eia-right-rail, // nope, cant spell or type
+  .widget .eai-right-rail {
+    width: 100%;
+  }
+  .biz-today.horizontal aside.widget-zbtlist  { // styling for business today ads underneath content */
+    ul.zbt-ad-list  {
+      li {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* ********** end media ************ */
+

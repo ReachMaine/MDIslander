@@ -1,0 +1,10 @@
+Overrides (i.e. changes made to original template that would need to be remade)
+	/inc/custom_functions.php 
+		- function post_thumb() s.t. if doest do the hover over for file
+	/inc/menu-walker.php ???
+
+Search box 
+	- dont display the spyglass s.t. dont need to click to search (header.php)
+	- add border (css)
+	- change the place holder text to font awesome icon (header.php)
+	- change font to font-awesome (css)

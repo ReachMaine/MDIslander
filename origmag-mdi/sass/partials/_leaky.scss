@@ -1,0 +1,180 @@
+$subscribe-button-background: #92CF34;
+$leaky-block-msg: #007a94; //#1d73be;
+
+#issuem-leaky-paywall-articles-remaining-nag, 
+#issuem-leaky-paywall-articles-zero-remaining-nag {
+	#issuem-leaky-paywall-articles-remaining-close {
+		height: 0px!important;
+	}
+	#issuem-leaky-paywall-articles-remaining-text {
+		padding-top: 50px!important;
+	}
+	#issuem-leaky-paywall-articles-remaining-subscribe-link {
+		height: 45px!important;
+	} 
+	#issuem-leaky-paywall-articles-remaining-login-link {
+		background-color: $leaky-block-msg!important;
+		a { 
+			color: #FFFFFF!important;
+		}
+	}
+}
+#eai-inline-leaky-pay {
+	text-align: center;
+	h2 {
+		display: none;
+		visibility: hidden;
+	}
+	.leaky_paywall_subscription_options {
+		.leaky_paywall_subscription_option {
+			border: none; 
+			box-shadow: none;
+			padding: 0px;
+			margin: 0px; // for now 
+			h3 {
+				display: none;
+				visibility: hidden;
+
+			}
+			.leaky_paywall_subscription_current_level,
+			.leaky_paywall_subscription_allowed_content, 
+			.leaky_paywall_subscription_allowed_content p, 
+			.leaky_paywall_subscription_price,
+			.leaky_paywall_subscription_price p {
+				display: none;
+				visibility: hidden;
+			}
+			.leaky_paywall_subscription_payment_options {
+				.stripe-button-el {
+					border-radius: 0px;
+					border: 0px;
+					padding: 0px;
+					span {
+						border-radius: 0px;
+						padding: 10px;
+						width: 300px;
+						font-size: 25px;
+						background-image: none;
+						background-color: $subscribe-button-background;
+					}
+					
+				}
+			}
+		}
+
+	}
+}
+.eai-paywall-thanks {
+	font-weight: bold;
+	text-align: center;	
+}
+
+.ea-leaky-login { // ul 
+	display: inline;
+	float: left;
+	padding-right: 15px;
+	li {
+		padding-left: 5px;
+		padding-right: 5px;
+		display: inline;
+	}
+	li:first-child {
+
+		border-right: 1px solid $linkcolor;
+	}
+}
+#eia-updateuser {
+	.form-table {
+		th {
+			width: 130px;
+		}
+	}
+	input[type="text"]:disabled {
+		background-color: #cfcfcf;
+	}
+}
+.eai-leaky-nosub { // msg when no subscription.
+	font-size: 20px;
+	color: red;
+}
+
+.eai-login-fail-msg { // message when login fails.
+	padding: 10px 0;
+	color: red;
+	font-size: 20px;
+}
+
+#leaky_paywall_message { // box & message when need to login in (no via nag)
+	background-color: $leaky-block-msg;
+	border-radius: 0px;
+	text-align: center;
+	border: 0px;
+	a {
+		text-decoration: underline;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+}
+.eai-leaky-thanksbox {
+	padding: 10px;
+	margin-left: 0px;
+	.eai-leaky-thanks {
+		margin-left: 0px;
+		border: 2px solid black;
+		padding: 15px;
+		h3 {
+			font-size: 28px;
+			color: $linkcolor;
+		}
+	}
+	.eai-leaky-continue a {
+		font-size: 25px;
+		color: $linkcolor;
+	}
+}
+
+// welcome page 
+.eai-leaky-welcome-box {
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-left: 0px;
+	.eai-welcome-text {
+		color: $mdilinkcolor;
+	}
+	.eai-leaky-welcome-user {
+		margin-left: 0px;
+		border: 2px solid black;
+		padding: 15px;
+		font-size: 16px;
+		text-align: center;
+	}
+}
+.eai-leaky-welcome-where {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.eai-leaky-welcome-home,
+.eai-leaky-welcome-edig 
+ {
+ 	text-align: center;
+	img {
+		border: 1px solid black;
+	}
+	.eai-where-to {
+		padding-top: 10px;
+		color:  $mdilinkcolor;
+	}
+}
+.eai-leak-ngbox {
+	padding-top: 20px;
+	text-align: center;
+	.eai-leaky-expired {
+		color: red;
+		text-align: center;
+	}
+}
+.eai-with-subscript {
+	text-align: center;
+}
+
