@@ -3,15 +3,15 @@
 
 
 
-/* All Mobile Sizes (devices and browser) */  
-@media only screen and (max-width: 767px) {}   
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */  
-@media only screen and (min-width: 480px) and (max-width: 767px) {}   
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */  
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
- 
+
 
 /* media breakpoints for orig mag:  >1200, max-width:1199px, max-width: 768px */
 @media only screen and (min-width: 1200px) {
@@ -22,11 +22,14 @@
 		margin-left: -30px;
 		//border: 1px solid black;
 	}
+  #eai-home-house1 {
+    padding-right: 15px;
+  }
 
 }
-/* Smaller than standard 960 (devices and browsers) */  
+/* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) { // navigation menu breaks here
-  // uber menu stuff here 
+  // uber menu stuff here
   nav.ubermenu {
     display: none;
     visibility: false;
@@ -35,7 +38,7 @@
     border: none;
   }
   // end ubermenu
-	
+
 	.hidden-tablet {
 		display: none;
 		visibility: false;
@@ -60,12 +63,12 @@
   .prl-grid .prl-grid > [class*='prl-span-']{ margin-bottom: 20px; }
   .prl-grid .prl-grid > [class*='prl-span-']:last-child { margin-bottom:0;}
   .prl-grid-divider:not(:empty) > [class*='prl-span-']:not(.prl-span-12):nth-child(n+2) { border:none;  }
-	
+
 }
 /* #Mobile (Landscape)  (min-width: 480px) and (max-width: 767px) width: 480px   */
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */  
-@media only screen and (max-width: 479px) { 
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
 	.hidden-phone {
 		display: none;
 		visibility: false;
@@ -99,4 +102,3 @@
 }
 
 /* ********** end media ************ */
-

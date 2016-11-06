@@ -782,7 +782,10 @@ a.more-about-link:before {
   .widget .textwidget .eia-right-rail,
   .widget .textwidget .eai-right-rail {
     width: 300px;
-    margin-left: -30px; } }
+    margin-left: -30px; }
+
+  #eai-home-house1 {
+    padding-right: 15px; } }
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
   nav.ubermenu {
