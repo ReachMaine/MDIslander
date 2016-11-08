@@ -7,6 +7,7 @@
 	18Sept15 - zig:  add eacat_sport page build block.
 	31jan16 - zig:  add technavia paywall login call (take out leaky)
 	11Nov16 - zig:  add widget area for house ad on homepage under featured box
+	7Nov16  - zig add top bar widget area.
 */
 // add_image_size( 'ea_featuredimg', 600, 900, false ); // size of single post thumbnail
 //add_image_size( 'ea_thumbnail', '150', '600', false );
@@ -45,6 +46,15 @@ require_once(get_stylesheet_directory().'/inc/eai_obits.php');
 require_once(get_stylesheet_directory().'/inc/eai_technav.php');
 
 if ( function_exists('register_sidebar') ){
+		// topbar
+		register_sidebar(array(
+			'name' => 'Topbar',
+			'id' => 'topbar',
+			'description' => 'Top bar above header',
+			'before_widget' => '<div class="prl-span-12"><div id="%1$s" class=" %2$s topbar">',
+			'after_widget'  => '</div></div>'
+		));
+
 		// Banner Ad
 		 register_sidebar(array(
 			'name' => 'Breaking News',
