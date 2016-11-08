@@ -1,5 +1,5 @@
 @import url("../original/style.css");
-/*  
+/*
 	Theme Name: MDI - orig
 	Theme URI: http://www.reachmaine.com/
 	Description: Original Mag Template for the MDIslander
@@ -331,11 +331,18 @@ aside .widget-zbtlist ul.zbt-ad-list {
 /* *** END sidebar styling *** */
 .party-R {
   color: #dd3333;
-  font-weight: bold; }
+  font-weight: bold;
+  width: initial; }
 
 .party-D {
   color: #1e73be;
-  font-weight: bold; }
+  font-weight: bold;
+  width: initial; }
+
+.party-G {
+  color: #1db60e;
+  font-weight: bold;
+  width: initial; }
 
 .eai-resultsrace-wrapper {
   border-bottom: 1px solid #333;
@@ -399,7 +406,7 @@ table.eai-results {
     float: left;
     padding-left: 20px;
     padding-right: 20px; }
-    .eai-resultsrace-wrapper .eai-racesum .eai-precincts-reporting .eai-precincts-title {
+    .eai-resultsrace-wrapper .eai-racesum .eai-precincts-reporting .eai-precincts-title, .eai-resultsrace-wrapper .eai-racesum .eai-precincts-reporting .eai-precincts-subtitle {
       text-align: center; }
     .eai-resultsrace-wrapper .eai-racesum .eai-precincts-reporting .eai-precincts-precent {
       text-align: center;
@@ -414,20 +421,40 @@ table.eai-results {
   border-top: 1px solid grey;
   clear: both; }
 
+@media only screen and (min-width: 768px) {
+  .eai-resultsimplepie-wrapper,
+  .eai-resultsimple-wrapper {
+    width: 30%; } }
+.eai-resultsimplepie-wrapper,
 .eai-resultsimple-wrapper {
-  width: 30%;
   float: left;
   padding: 5px;
   margin: 5px;
   border: 1px solid grey;
-  height: 160px; }
+  height: 165; }
+  .eai-resultsimplepie-wrapper .eai-results-sum,
   .eai-resultsimple-wrapper .eai-results-sum {
     margin-bottom: 5px; }
+  .eai-resultsimplepie-wrapper p,
   .eai-resultsimple-wrapper p {
     margin-bottom: 0px; }
+  .eai-resultsimplepie-wrapper .eai-racesimple .eai-results-sum span,
+  .eai-resultsimple-wrapper .eai-racesimple .eai-results-sum span {
+    width: auto !important;
+    width: initial !important; }
+  .eai-resultsimplepie-wrapper .eai-racesimplepie .eai-precincts-reporting p,
+  .eai-resultsimple-wrapper .eai-racesimplepie .eai-precincts-reporting p {
+    text-align: center; }
+  .eai-resultsimplepie-wrapper .eai-results-unofficial,
+  .eai-resultsimple-wrapper .eai-results-unofficial {
+    text-align: center; }
 
 .eai-checkback {
   color: #D33; }
+
+.eai-election-inputs-form dd, .eai-election-inputs-form dt {
+  display: inline-block;
+  padding: 3px; }
 
 /********* start styling for Google Custom Seach **********/
 .nav_search.eai-gsc-nav,

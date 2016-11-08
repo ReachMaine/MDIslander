@@ -1,4 +1,4 @@
-/*  
+/*
 	Theme Name: MDI - orig
 	Theme URI: http://www.reachmaine.com/
 	Description: Original Mag Template for the MDIslander
@@ -9,16 +9,15 @@
 	License URI: license.txt
 	Template: original
 */
- 
+
 @import url("../original/style.css");
 @import "partials/settings";
 @import "partials/styles";
 @import "partials/electionresults";
 @import "partials/gcs"; // google custom search
-@import "partials/leaky"; 
+@import "partials/leaky";
 @import "partials/zbz"; // biz pull from local
-@import "partials/_sportscores"; 
-
+@import "partials/_sportscores";
 
 /* =Theme customization starts here */
 .wp-caption.alignnone {
@@ -92,7 +91,7 @@
 	}
 	.copyright {
 		.left {
-			width: auto; // 
+			width: auto; //
 		}
 	}
 }
@@ -121,16 +120,16 @@ aside .widget_hcclist {
 					font-size: 14px;
 				}
 				.hcc_event_venue {
-					
+
 				}
 				.hcc_event_datetime {
-					
+
 				}
 			}
-			
+
 		}
 		li:not(:last-child) {
-			
+
 		}
 	}
 }
@@ -170,7 +169,7 @@ a.more-about-link:before  {
 			color: #FF6700;
 		}
 	}
-	
+
 }
 
 .widget .textwidget .eia-right-rail,
@@ -181,7 +180,7 @@ a.more-about-link:before  {
 	box-shadow: 7px 15px 33px 0px rgba(0,0,0,0.75);
 }
 .flexslider.gallery_slider {
-	float: left; 
+	float: left;
 }
 
 .flexslider .caption {
