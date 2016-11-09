@@ -10,6 +10,7 @@
 		31Jan16 - zig - add scripts for technavia paywall.
 		12Oct16 zig - remove https for search (for now)
 		7Nov16 zig - add topbar widget area.
+		8Nov16 zig - add google jsapi script for elections pie charts.
 
 */
 global $theme_url, $prl_data; ?>
@@ -39,7 +40,7 @@ global $theme_url, $prl_data; ?>
 		<script data-cfasync="false" type="text/javascript" >var ta_cat = "not_post"; </script>
 	<?php }  ?>
    <script data-cfasync="false" type="text/javascript" src="http://mountdesertislander.me.pw.newsmemory.com/include.php?service=onstop"></script>
-
+	 <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
 <?php wp_head();?>
 	<?php if ( is_home() || is_front_page() )  { ?>
     	<meta http-equiv='Cache-Control' content='no-cache'>
