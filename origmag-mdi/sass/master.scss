@@ -20,6 +20,14 @@
 @import "partials/_sportscores";
 
 /* =Theme customization starts here */
+
+/* Broadstreet */
+img.bs-expandable-expanded {
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+}
+
 .wp-caption.alignnone {
 	width: inherit!important;
 }
