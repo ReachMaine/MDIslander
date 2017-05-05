@@ -666,9 +666,9 @@ input.gsc-search-button-v2 {
   padding: 0;
   display: flex;
   justify-content: space-around; }
-  #nav.prl-navbar #sf-menu .sf-arrows .sf-with-ul {
+  #nav.prl-navbar #sf-menu .sf-with-ul {
     padding: 0; }
-  #nav.prl-navbar #sf-menu .sf-arrows .sf-with-ul:after {
+  #nav.prl-navbar #sf-menu .sf-with-ul:after {
     content: ''; }
 
 /* Broadstreet */
