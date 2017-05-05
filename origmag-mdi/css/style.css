@@ -661,6 +661,16 @@ input.gsc-search-button-v2 {
   content: " >>> "; }
 
 /* =Theme customization starts here */
+/* Main Menu */
+#nav.prl-navbar #sf-menu {
+  padding: 0;
+  display: flex;
+  justify-content: space-around; }
+  #nav.prl-navbar #sf-menu .sf-arrows .sf-with-ul {
+    padding: 0; }
+  #nav.prl-navbar #sf-menu .sf-arrows .sf-with-ul:after {
+    content: ''; }
+
 /* Broadstreet */
 img.bs-expandable-expanded {
   border-right: 1px solid black;
@@ -827,6 +837,9 @@ a.more-about-link:before {
     margin: 0px;
     padding: 0px;
     border: none; }
+
+  #nav.prl-navbar ul#sf-menu {
+    display: none !important; }
 
   .hidden-tablet {
     display: none;
