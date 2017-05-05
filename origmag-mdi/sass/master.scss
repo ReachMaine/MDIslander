@@ -21,6 +21,23 @@
 
 /* =Theme customization starts here */
 
+/* Main Menu */
+#nav.prl-navbar #sf-menu {
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	.sf-arrows {
+		.sf-with-ul {
+			padding: 0;
+		}
+		.sf-with-ul:after {
+			content: '';
+		}
+	}
+}
+
+
+
 /* Broadstreet */
 img.bs-expandable-expanded {
 	border-right: 1px solid black;
