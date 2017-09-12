@@ -18,6 +18,7 @@
 @import "partials/leaky";
 @import "partials/zbz"; // biz pull from local
 @import "partials/_sportscores";
+@import "partials/mdi_expand_image";
 
 /* =Theme customization starts here */
 
@@ -26,15 +27,93 @@
 	padding: 0;
 	display: flex;
 	justify-content: space-around;
-		.sf-with-ul {
-			padding: 0;
+	.sf-with-ul {
+		padding: 0;
+	}
+	.sf-with-ul:after {
+		content: '';
+	}
+	li.mdi-menu-button { // styling the subscribe button on main menu.
+		background-color:  #7fda9a;
+		a {
+			padding-left: 7px;
+			padding-right: 7px;
+			color: white;
 		}
-		.sf-with-ul:after {
-			content: '';
-		}
+	}
+	li a {
+		font-size: 18px;
+		font-family: "Roboto Condensed";
+	}
 }
 
+#nav.prl-navbar {
+	.prl-container .nav-wrapper {
+		border-top: none;
+	}
+	margin-bottom: 0px;
+}
 
+#topnav a {
+	font-family: "Roboto Condensed";
+	font-size: 14px;
+}
+
+.prl-grid>[class*='prl-span-'] {
+margin-bottom: 10px;
+}
+
+/* Fonts */
+p, .prl-entry-content li, .single-post-thumbnail-caption {
+	font-family: Vollkorn;
+}
+
+p {
+	font-size: 17px;
+	line-height: 23px;
+}
+
+.prl-entry-content li {
+	font-size: 15px;
+}
+
+.ccfic { //featured image caption size
+	font-size: 15px;
+}
+
+p.yarpp-thumbnail-title { //Related posts titles
+	font-family: "Roboto Condensed"
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 14px;
+}
+
+h4.eai-featured-2nd {
+	line-height: 19px;
+}
+
+aside .widget .widget-title {
+	font-family: "Roboto Condensed";
+	border-bottom: 0px;
+}
+
+strong:first-child { //dateline in posts smaller
+	font-size: 15px;
+}
+
+/* Body */
+/* remove body shadow and background*/
+
+body.site-boxed .site-wrapper {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+body {
+	background-image: none;
+}
 
 /* Broadstreet */
 img.bs-expandable-expanded {
@@ -51,6 +130,23 @@ img.bs-expandable-expanded {
 	.slider_content .slider_title {
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,$slider-background 100%);
 	}
+}
+
+/* Sidebar */
+#sidebar .widget_recent_entries, #sidebar .widget_advanced_menu, #sidebar .widget-recent-post, #sidebar .widget_awesomeweatherwidget, #sidebar .widget-zbzdir-list, #sidebar .widget-zbtlist, #sidebar .widget_hcclist, #sidebar #zsfw-authors, #sidebar {
+border: none;
+}
+
+#sidebar .widget_advanced_menu.icon-home::before, #sidebar .widget_hcclist::before, #sidebar .widget-zbzdir-list::before, #sidebar .widget-zbtlist::before, #sidebar .widget-recent-post::before {
+content: none;
+}
+
+/* Widgets */
+.prl-block-title, .comment-reply-title, .yarpp-related-widget h3 {
+	font-family: "Roboto Condensed";
+	border-bottom: none;
+	margin-bottom: 0px;
+	font-size: 15px;
 }
 
 /* the Author tabs section at bottom of single posts */

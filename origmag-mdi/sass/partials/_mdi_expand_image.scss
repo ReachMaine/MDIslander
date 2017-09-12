@@ -1,0 +1,43 @@
+@media only screen and (min-width: 480px) {
+
+	.wp-caption.mdi-expanded-image,
+	.mdi-expanded-image img {
+    	max-width: 100%!important;
+    	width: 100%!important;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.mdi-expanded-image,
+	.mdi-expanded-image img {
+    	max-width: 100%!important;
+    	width: 100%!important;
+    	-webkit-transition-duration: 0s;
+	 	-moz-transition-duration: 1s;
+    	-o-transition-duration: 1s;
+    	transition-duration: 1s;
+	}
+
+	img.mdi-expandable,
+	.mdi-contracted-image {
+   		-webkit-transition-duration: 0s;
+    	-moz-transition-duration: 1s;
+    	-o-transition-duration: 1s;
+    	transition-duration: 1s;
+	}
+    .mdi-expanded-image.mdi-snap-image,
+    .mdi-expanded-image.mdi-snap-image img.mdi-snap-image,
+    img.mdi-expandable.mdi-snap-image,
+    .mdi-contracted-image.mdi-snap-image {
+        -webkit-transition-duration: 0s;
+        -moz-transition-duration: 0s;
+        -o-transition-duration: 0s;
+        transition-duration: 0s;
+    }
+
+	img.mdi-expandable:hover {
+    	box-shadow: 0 0 10px #555;
+    	cursor: pointer;
+	}
+}

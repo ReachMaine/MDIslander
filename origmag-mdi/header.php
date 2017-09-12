@@ -12,6 +12,7 @@
 		7Nov16 zig - add topbar widget area.
 		8Nov16 zig - add google jsapi script for elections pie charts.
 		1Sept16 zig - take out pie chart google script. - only for electsion.
+		12Sept17 TimS - Added Vollkorn Google Font
 
 */
 global $theme_url, $prl_data; ?>
@@ -35,6 +36,7 @@ global $theme_url, $prl_data; ?>
 	<?php if($prl_data['site_fav']!='') {?>
 	<link rel="shortcut icon" href="<?php echo trim($prl_data['site_fav']);?>">
 	<?php } ?>
+		<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">
     <script data-cfasync="false" type="text/javascript" src="http://cdn.broadstreetads.com/init.js"></script>
     <?php /* technavia header script  */
 	if (!is_singular('post')) { 	?>

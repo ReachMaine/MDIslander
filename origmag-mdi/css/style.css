@@ -660,6 +660,40 @@ input.gsc-search-button-v2 {
 .eai-scores .scores-more-link:after {
   content: " >>> "; }
 
+@media only screen and (min-width: 480px) {
+  .wp-caption.ea-expanded-image,
+  .ea-expanded-image img {
+    max-width: 100% !important;
+    width: 100% !important; } }
+@media only screen and (min-width: 1024px) {
+  .ea-expanded-image,
+  .ea-expanded-image img {
+    max-width: 100% !important;
+    width: 100% !important;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s; }
+
+  img.ea-expandable,
+  .ea-contracted-image {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s; }
+
+  .ea-expanded-image.ea-snap-image,
+  .ea-expanded-image.ea-snap-image img.ea-snap-image,
+  img.ea-expandable.ea-snap-image,
+  .ea-contracted-image.ea-snap-image {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s; }
+
+  img.ea-expandable:hover {
+    box-shadow: 0 0 10px #555;
+    cursor: pointer; } }
 /* =Theme customization starts here */
 /* Main Menu */
 #nav.prl-navbar #sf-menu {
@@ -670,6 +704,67 @@ input.gsc-search-button-v2 {
     padding: 0; }
   #nav.prl-navbar #sf-menu .sf-with-ul:after {
     content: ''; }
+  #nav.prl-navbar #sf-menu li.mdi-menu-button {
+    background-color: #7fda9a; }
+    #nav.prl-navbar #sf-menu li.mdi-menu-button a {
+      padding-left: 7px;
+      padding-right: 7px;
+      color: white; }
+  #nav.prl-navbar #sf-menu li a {
+    font-size: 18px;
+    font-family: "Roboto Condensed"; }
+
+#nav.prl-navbar {
+  margin-bottom: 0px; }
+  #nav.prl-navbar .prl-container .nav-wrapper {
+    border-top: none; }
+
+#topnav a {
+  font-family: "Roboto Condensed";
+  font-size: 14px; }
+
+.prl-grid > [class*='prl-span-'] {
+  margin-bottom: 10px; }
+
+/* Fonts */
+p, .prl-entry-content li, .single-post-thumbnail-caption {
+  font-family: Vollkorn; }
+
+p {
+  font-size: 17px;
+  line-height: 23px; }
+
+.prl-entry-content li {
+  font-size: 15px; }
+
+.ccfic {
+  font-size: 15px; }
+
+p.yarpp-thumbnail-title {
+  font-family: "Roboto Condensed"; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 14px; }
+
+h4.eai-featured-2nd {
+  line-height: 19px; }
+
+aside .widget .widget-title {
+  font-family: "Roboto Condensed";
+  border-bottom: 0px; }
+
+strong:first-child {
+  font-size: 15px; }
+
+/* Body */
+/* remove body shadow and background*/
+body.site-boxed .site-wrapper {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none; }
+
+body {
+  background-image: none; }
 
 /* Broadstreet */
 img.bs-expandable-expanded {
@@ -684,6 +779,20 @@ img.bs-expandable-expanded {
   background-color: #0D365A; }
   #sliderTab .slider_content .slider_title {
     background: linear-gradient(to bottom, transparent 0%, #0D365A 100%); }
+
+/* Sidebar */
+#sidebar .widget_recent_entries, #sidebar .widget_advanced_menu, #sidebar .widget-recent-post, #sidebar .widget_awesomeweatherwidget, #sidebar .widget-zbzdir-list, #sidebar .widget-zbtlist, #sidebar .widget_hcclist, #sidebar #zsfw-authors, #sidebar {
+  border: none; }
+
+#sidebar .widget_advanced_menu.icon-home::before, #sidebar .widget_hcclist::before, #sidebar .widget-zbzdir-list::before, #sidebar .widget-zbtlist::before, #sidebar .widget-recent-post::before {
+  content: none; }
+
+/* Widgets */
+.prl-block-title, .comment-reply-title, .yarpp-related-widget h3 {
+  font-family: "Roboto Condensed";
+  border-bottom: none;
+  margin-bottom: 0px;
+  font-size: 15px; }
 
 /* the Author tabs section at bottom of single posts */
 #ts-fab-below div.ts-fab-tabs div.ts-fab-tab {
