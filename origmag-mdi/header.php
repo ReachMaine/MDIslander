@@ -38,12 +38,12 @@ global $theme_url, $prl_data; ?>
 	<link rel="shortcut icon" href="<?php echo trim($prl_data['site_fav']);?>">
 	<?php } ?>
 		<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">
-    <script data-cfasync="false" type="text/javascript" src="http://cdn.broadstreetads.com/init.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.broadstreetads.com/init.js"></script>
     <?php /* technavia header script  */
 	if (!is_singular('post')) { 	?>
 		<script data-cfasync="false" type="text/javascript" >var ta_cat = "not_post"; </script>
 	<?php }  ?>
-   <script data-cfasync="false" type="text/javascript" src="http://mountdesertislander.me.pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script>
+   <script data-cfasync="false" type="text/javascript" src="https://mountdesertislander.me.pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script>
 	 <?php /* <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script> */ ?>
 <?php wp_head();?>
 	<?php if ( is_home() || is_front_page() )  { ?>
@@ -56,8 +56,8 @@ global $theme_url, $prl_data; ?>
 			if ($image_thumbnail) {
 				echo '<meta name="thumbnail" content="'.$image_thumbnail[0].'">';
 			} else {
-				echo '<meta name="thumbnail" content="http://www.mdislander.com/wp-content/themes/origmag-mdi/images/ogi-mdi.jpg">';
-				echo '<meta property="og:image" content="http://www.mdislander.com/wp-content/themes/origmag-mdi/images/ogi-mdi.jpg">';
+				echo '<meta name="thumbnail" content="https://www.mdislander.com/wp-content/themes/origmag-mdi/images/ogi-mdi.jpg">';
+				echo '<meta property="og:image" content="https://www.mdislander.com/wp-content/themes/origmag-mdi/images/ogi-mdi.jpg">';
 			}
 		}
 	?>
@@ -110,14 +110,14 @@ $body_class = array('Boxed'=>'site-boxed', 'Wide'=>'site-wide');
 					<?php  if($prl_data['header_custom_text']!=''){?>
 					<span class="prl-header-custom-text"><?php echo trim($prl_data['header_custom_text']);?></span>
 					<?php  } if($prl_data['header_time']!='Disable'){  $current_site = get_current_site(); ?>
-					<span class="prl-header-time"><a href="http://www.reachdowneast.com/calendar/events/today/"><i class="fa fa-calendar"></i><?php echo date('l');?> - <?php echo date('M d, Y');?></a></span>
+					<span class="prl-header-time"><a href="https://www.reachdowneast.com/calendar/events/today/"><i class="fa fa-calendar"></i><?php echo date('l');?> - <?php echo date('M d, Y');?></a></span>
 					<?php } ?>
 					<?php echo eai_technav_loginmenu(); ?>
 				</div>
 				<div class="prl-header-social">
 					<?php if($prl_data['header_facebook']!=''){?><a href="<?php echo $prl_data['header_facebook'];?>" class="fa fa-facebook" title="Facebook" target="_blank"></a><?php }?>
 					<?php if($prl_data['header_twitter']!=''){?><a href="https://twitter.com/<?php echo $prl_data['header_twitter'];?>" class="fa fa-twitter" title="Twitter" target="_blank"></a><?php }?>
-					<?php if($prl_data['header_pinterest']!=''){?><a href="http://www.pinterest.com/<?php echo $prl_data['header_pinterest'];?>" class="fa fa-pinterest" title="Pinterest" target="_blank"></a><?php }?>
+					<?php if($prl_data['header_pinterest']!=''){?><a href="https://www.pinterest.com/<?php echo $prl_data['header_pinterest'];?>" class="fa fa-pinterest" title="Pinterest" target="_blank"></a><?php }?>
 					<?php if($prl_data['header_google_plus']!=''){?><a href="<?php echo $prl_data['header_google_plus'];?>" class="fa fa-google-plus" title="Google plus"></a><?php }?>
 					<?php if($prl_data['header_linkedin']!=''){?><a href="<?php echo $prl_data['header_linkedin'];?>" class="fa fa-linkedin" title="LinkedIn"></a><?php }?>
                     <?php if($prl_data['header_instagram']!=''){?><a href="<?php echo $prl_data['header_instagram'];?>" class="fa fa-instagram" title="Instagram"></a><?php }?>
