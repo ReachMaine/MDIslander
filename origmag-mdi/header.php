@@ -43,7 +43,7 @@ global $theme_url, $prl_data; ?>
 	if (!is_singular('post')) { 	?>
 		<script data-cfasync="false" type="text/javascript" >var ta_cat = "not_post"; </script>
 	<?php }  ?>
-   <!--script data-cfasync="false" type="text/javascript" src="http://mountdesertislander.me.pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script-->
+   <script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script>
 	 <?php /* <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script> */ ?>
 <?php wp_head();?>
 	<?php if ( is_home() || is_front_page() )  { ?>
