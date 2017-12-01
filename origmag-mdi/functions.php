@@ -8,6 +8,7 @@
 	31jan16 - zig:  add technavia paywall login call (take out leaky)
 	11Nov16 - zig:  add widget area for house ad on homepage under featured box
 	7Nov16  - zig add top bar widget area.
+	29Nov17 - zig add obit bottom ad widget similar to EA.
 */
 // add_image_size( 'ea_featuredimg', 600, 900, false ); // size of single post thumbnail
 //add_image_size( 'ea_thumbnail', '150', '600', false );
@@ -90,6 +91,15 @@ if ( function_exists('register_sidebar') ){
 			'description' => 'House ad space under featured box.',
 			'before_widget' => '<div class="prl-span-12"><div id="%1$s" class=" %2$s ad-container">',
 			'after_widget'  => '</div></div>'
+		));
+
+		// new bottom content widget area for obits.
+		register_sidebar(array(
+			'name' => 'Obit Bottom Ad',
+			'id' => 'obit_bottom_ad',
+			'description' => 'Widget for Obit bottom content ad.',
+			'before_widget' => '<div id="%1$s" class=" %2$s obit-ad-container">',
+			'after_widget'  => '</div>'
 		));
 	}
 
