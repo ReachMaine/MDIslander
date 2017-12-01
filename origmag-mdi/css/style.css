@@ -12,6 +12,18 @@
 @import url("../original/style.css");
 /* Colors ---------------------------------------------- */
 /* Typography ------------------------------------------ */
+.ea-button-wrap {
+  margin-top: 20px;
+  margin-bottom: 30px; }
+  .ea-button-wrap .ea-button {
+    padding: 15px;
+    background-color: #00829b;
+    color: white;
+    font-size: 1.3em; }
+  .ea-button-wrap .ea-button:hover {
+    color: #ececec;
+    text-decoration: none; }
+
 /* ********* sytles ******** */
 .nowrap {
   white-space: nowrap; }

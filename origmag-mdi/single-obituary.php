@@ -77,8 +77,8 @@
 
 						   <?php wp_link_pages(array('before' => __('Pages','presslayer').': ', 'next_or_number' => 'number')); ?>
 						   <?php edit_post_link(__('Edit','presslayer'),'<p>','</p>'); ?>
-
-						   <?php if(isset($prl_data['banner_after_single_content']) && $prl_data['banner_after_single_content']!='') echo '<div class="hide-mobile"><center class="ad-container ad-in-content">'.stripslashes($prl_data['banner_after_single_content']).'</center></div>';?>
+               <?php if (is_active_sidebar('obit_bottom_ad')) { echo '<div class="hide-mobile"><center class="ad-container ad-in-content">'; dynamic_sidebar('obit_bottom_ad'); echo '</center></div>'; } ?> 
+						   <?php /* zig xout if(isset($prl_data['banner_after_single_content']) && $prl_data['banner_after_single_content']!='') echo '<div class="hide-mobile"><center class="ad-container ad-in-content">'.stripslashes($prl_data['banner_after_single_content']).'</center></div>';*/ ?>
 
 						</div>
 					</div>

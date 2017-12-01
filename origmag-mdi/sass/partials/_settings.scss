@@ -6,16 +6,31 @@ $titleFontColor: #a62425;
 $fontcolor: #333;
 $photo-credit-color: #999;
 $mdilinkcolor: #00839c;
-// Background colors: 
-$bkgoundContent: #FFFFFF; // 
+$button-color: #00829b;
+// Background colors:
+$bkgoundContent: #FFFFFF; //
 $menuBarbkg: #D14719; //
 $bordergrey: #BDBDBD;
 $borderltgrey: #DDD;
 $borderdkgrey: #808080;
-$breakingnews-background: #f2f4f8; 
+$breakingnews-background: #f2f4f8;
 
 $weatherborder: #1E73BE;
 $widget-titlecolor: #1E73BE;
 $footer-widgets-background: #333;
 $slider-background: #0D365A; // #5B7F9E; // #1E73BE;
 /* Typography ------------------------------------------ */
+.ea-button-wrap {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    .ea-button {
+        padding: 15px;
+        background-color: $button-color;
+        color: white;
+        font-size: 1.3em;
+    }
+    .ea-button:hover {
+        color: #ececec;
+        text-decoration: none;
+    }
+}
