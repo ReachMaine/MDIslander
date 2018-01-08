@@ -298,6 +298,14 @@ a.more-about-link:before  {
 	-moz-box-shadow: 7px 15px 33px 0px rgba(0,0,0,0.75);
 	box-shadow: 7px 15px 33px 0px rgba(0,0,0,0.75);
 }
+
+#eai_babyfaces.eia-right-rail.eai-countdown-bold {
+	.bs-countdown {
+		.bs-countdown-text {
+			font-weight: 900!important;
+		}
+	}
+}
 .flexslider.gallery_slider {
 	float: left;
 }
