@@ -845,8 +845,16 @@ img.bs-expandable-expanded {
     margin-bottom: 10px; }
     #footer .footer-widget .prl-span-3 center {
       padding-bottom: 5px; }
+    #footer .footer-widget .prl-span-3 .widget_nav_menu ul.menu li a,
     #footer .footer-widget .prl-span-3 a {
-      font-size: 14px; }
+      font-size: 14px;
+      color: #DDD; }
+    #footer .footer-widget .prl-span-3 .widget_nav_menu ul.menu li.eai-bright-link a,
+    #footer .footer-widget .prl-span-3 a.eai-bright-link {
+      color: #00839c;
+      font-weight: bold; }
+    #footer .footer-widget .prl-span-3 .widget_nav_menu li {
+      text-align: center; }
 #footer .copyright .left {
   width: auto; }
 

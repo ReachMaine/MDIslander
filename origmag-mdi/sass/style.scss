@@ -203,8 +203,18 @@ content: none;
 			center {
 				padding-bottom: 5px;
 			}
+			.widget_nav_menu ul.menu li a,
 			a {
 				font-size: 14px;
+				color: $footer-widgets-link-color;
+			}
+			.widget_nav_menu ul.menu li.eai-bright-link a,
+			a.eai-bright-link {
+				color: $mdilinkcolor;
+				font-weight: bold;
+			}
+			.widget_nav_menu li {
+				text-align: center;
 			}
 		}
 	}
