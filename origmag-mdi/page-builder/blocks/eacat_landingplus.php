@@ -1,5 +1,5 @@
 <?php
-/** EA category landing plus bock - category & subcategories
+/* EA category landing plus bock - category & subcategories
 		featured block from categoey & blocks under neath catplus
 		ex: mdi landing page
 
@@ -168,7 +168,7 @@ if (!class_exists('eacat_landingplus')) {
 			 	if (($p < 4) && (get_the_ID() != $featuredid))  {
 			 		$displayed[] = get_the_ID();
 			 		$p++;
-			 		?> <li style="list-style-type:none"><h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo post_thumb(get_the_ID(),520, 360, true);?></a><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a> <?php echo get_label_format(get_the_ID());?> <?php echo get_label_meta(get_the_ID());?></h4></li> <?php
+			 		?> <li style="list-style-type:none"><h4 class="prl-article-title" ><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo post_thumb(get_the_ID(),520, 360, true);?></a><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a> <?php echo get_label_format(get_the_ID());?> <?php echo get_label_meta(get_the_ID());?></h4></li> <?php
 			   } ?>
 	        <?php
 

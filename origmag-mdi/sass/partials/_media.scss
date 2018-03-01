@@ -67,6 +67,13 @@
   .prl-grid .prl-grid > [class*='prl-span-']:last-child { margin-bottom:0;}
   .prl-grid-divider:not(:empty) > [class*='prl-span-']:not(.prl-span-12):nth-child(n+2) { border:none;  }
 
+	// mobile aritcle titles in blocks & archives
+	 ul.prl-list h4.prl-article-title,
+	 h3.prl-article-title,
+	 h4.prl-article-title {
+			 font-size: 24px;  // 1.3em;
+			 line-height:28px;
+		}
 }
 /* #Mobile (Landscape)  (min-width: 480px) and (max-width: 767px) width: 480px   */
 
