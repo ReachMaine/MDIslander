@@ -1051,7 +1051,16 @@ a.more-about-link:before {
   h3.prl-article-title,
   h4.prl-article-title {
     font-size: 24px;
-    line-height: 28px; } }
+    line-height: 28px; }
+
+  .widget .eai-right-rail,
+  .widget .eia-right-rail {
+    margin: auto; }
+
+  #sidebar {
+    float: none;
+    max-width: 320px;
+    margin: auto; } }
 /* #Mobile (Landscape)  (min-width: 480px) and (max-width: 767px) width: 480px   */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
@@ -1074,7 +1083,8 @@ a.more-about-link:before {
 
   .widget .eia-right-rail,
   .widget .eai-right-rail {
-    width: 100%; }
+    width: 100%;
+    margin: auto; }
 
   .biz-today.horizontal aside.widget-zbtlist ul.zbt-ad-list li {
     width: 100%; } }

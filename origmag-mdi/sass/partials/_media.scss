@@ -74,6 +74,16 @@
 			 font-size: 24px;  // 1.3em;
 			 line-height:28px;
 		}
+
+		.widget .eai-right-rail,
+		.widget .eia-right-rail { // center right rail at mobile
+			margin: auto;
+		}
+		#sidebar {
+			float: none;
+			max-width: 320px;
+			margin: auto;
+		}
 }
 /* #Mobile (Landscape)  (min-width: 480px) and (max-width: 767px) width: 480px   */
 
@@ -101,6 +111,7 @@
   .widget .eia-right-rail, // nope, cant spell or type
   .widget .eai-right-rail {
     width: 100%;
+		margin: auto;
   }
   .biz-today.horizontal aside.widget-zbtlist  { // styling for business today ads underneath content */
     ul.zbt-ad-list  {
