@@ -1065,6 +1065,15 @@ a.more-about-link:before {
     font-size: 24px;
     line-height: 28px; }
 
+  .prl-grid-divider.eacat_landing .prl-span-4 article,
+  .prl-grid-divider.ea-multiple-posts .prl-span-4 article,
+  ul.prl-list-line li:nth-child(n+2),
+  ol.prl-list-line li:nth-child(n+2),
+  .prl-grid-divider ul.prl-list-line li,
+  .prl-grid-divider ol.prl-list-line li {
+    border-top: 2px solid #eee;
+    padding-top: 20px; }
+
   .widget .eai-right-rail,
   .widget .eia-right-rail {
     margin: auto; }
