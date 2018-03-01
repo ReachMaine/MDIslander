@@ -79,6 +79,16 @@
 		.widget .eia-right-rail { // center right rail at mobile
 			margin: auto;
 		}
+		// single
+	 .prl-list-sharing { // sharing buttons
+		 li a i {
+			 font-size: 22px;
+		 }
+		 li a i.fa-print { // hide print button at mobile
+			 display: none;
+		 }
+	 }
+
 		#sidebar {
 			float: none;
 			max-width: 320px;

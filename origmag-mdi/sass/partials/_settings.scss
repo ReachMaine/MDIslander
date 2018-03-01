@@ -20,7 +20,25 @@ $widget-titlecolor: #1E73BE;
 $footer-widgets-background: #333;
 $footer-widgets-link-color: #484848;
 $slider-background: #0D365A; // #5B7F9E; // #1E73BE;
+
+// social colors
+$facebook-logo-color: #3B5998; // blue
+$twitter-logo-color: #1DA1F2; // bright blue
+$pinterest-logo-color: #BD081C; // red
+$linkedin-logo-color: #0077B5; // blue
 /* Typography ------------------------------------------ */
+i.fa-facebook-square {
+  color: $facebook-logo-color;
+}
+i.fa-twitter-square {
+  color: $twitter-logo-color;
+}
+i.fa-pinterest-square {
+  color: $pinterest-logo-color;
+}
+i.fa-linkedin-square {
+  color: $linkedin-logo-color;
+}
 .ea-button-wrap {
     margin-top: 20px;
     margin-bottom: 30px;

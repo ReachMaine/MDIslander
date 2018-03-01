@@ -221,7 +221,7 @@ global $theme_url, $image;
 <ul class="prl-list prl-list-sharing">
 	<li><a href="http://www.facebook.com/share.php?u=<?php the_permalink();?>" target="_blank"><i class="fa fa-facebook-square"></i> </a></li>
 	<li><a href="http://twitter.com/home?status=<?php the_title_attribute();?> - <?php the_permalink();?>" target="_blank"><i class="fa fa-twitter-square"></i> </a></li>
-	<li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" onClick="javascript:window.open(this.href,&#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=320,width=620&#39;);return false;"><i class="fa fa-google-plus-square"></i></a></li>
+	<?php /* <li><a href="https://plus.google.com/share?url=<?php the_permalink();?>" onClick="javascript:window.open(this.href,&#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=320,width=620&#39;);return false;"><i class="fa fa-google-plus-square"></i></a></li> */ ?>
 	<li><a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink();?>&media=<?php echo $image[0];?>" class="pin-it-button" count-layout="horizontal" onClick="javascript:window.open(this.href,&#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=320,width=620&#39;);return false;"><i class="fa fa-pinterest-square"></i></a></li>
 	<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink();?>&title=<?php the_title_attribute();?>" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
 	<li><a href="mailto:?subject=<?php the_title_attribute();?>&body=<?php the_permalink();?>" target="_blank"><i class="fa fa-envelope"></i></a></li>

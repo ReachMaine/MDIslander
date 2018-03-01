@@ -12,6 +12,18 @@
 @import url("../original/style.css");
 /* Colors ---------------------------------------------- */
 /* Typography ------------------------------------------ */
+i.fa-facebook-square {
+  color: #3B5998; }
+
+i.fa-twitter-square {
+  color: #1DA1F2; }
+
+i.fa-pinterest-square {
+  color: #BD081C; }
+
+i.fa-linkedin-square {
+  color: #0077B5; }
+
 .ea-button-wrap {
   margin-top: 20px;
   margin-bottom: 30px; }
@@ -1056,6 +1068,11 @@ a.more-about-link:before {
   .widget .eai-right-rail,
   .widget .eia-right-rail {
     margin: auto; }
+
+  .prl-list-sharing li a i {
+    font-size: 22px; }
+  .prl-list-sharing li a i.fa-print {
+    display: none; }
 
   #sidebar {
     float: none;
