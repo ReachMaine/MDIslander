@@ -54,6 +54,13 @@
 		visibility: visible;
 	}
 }
+
+@media only screen and (min-width: 769px) {
+	.hidden-desktop {
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 768px) { // span 9/ span3 stack here.
 
 	header#masthead .prl-container .masthead-bg .prl-header-mid {

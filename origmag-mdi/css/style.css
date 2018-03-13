@@ -1034,6 +1034,9 @@ a.more-about-link:before {
   .show-tablet {
     display: block !important;
     visibility: visible; } }
+@media only screen and (min-width: 769px) {
+  .hidden-desktop {
+    display: none; } }
 @media only screen and (max-width: 768px) {
   header#masthead .prl-container .masthead-bg .prl-header-mid {
     padding-left: 0px;
