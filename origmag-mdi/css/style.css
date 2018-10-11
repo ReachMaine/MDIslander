@@ -841,6 +841,15 @@ img.bs-expandable-expanded {
 .prl-list-category .list-thumbnail {
   margin-bottom: 0px; }
 
+/**  Over footer widget aread ***/
+#over_footer_wrap {
+  background-color: rgba(255, 255, 102, 0.67);
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  #over_footer_wrap .flex-ad-container {
+    display: flex;
+    justify-content: space-between; }
+
 /* Footer/COPYRIGHT */
 #footer .footer-widget {
   padding-top: 10px;
@@ -1090,7 +1099,13 @@ a.more-about-link:before {
   #sidebar {
     float: none;
     max-width: 320px;
-    margin: auto; } }
+    margin: auto; }
+
+  #over_footer_wrap {
+    display: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: none; } }
 /* #Mobile (Landscape)  (min-width: 480px) and (max-width: 767px) width: 480px   */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {

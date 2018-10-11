@@ -4,9 +4,17 @@
 		24Dec14 - zig - add broadstreet popup script
 		31jan16 - zig - add technavia script at bottom of page
 		13sept17 - zig - changing technavia script to newer version
+		10Oct18 - zig add widget area over footer (used for yellos pages currently)
 */ ?>
 <?php global $theme_url, $prl_data;?>
 	<footer id="footer">
+		<?php
+			if (is_active_sidebar('over_footer')) {
+				echo '<div id="over_footer_wrap" class="prl-container">';
+				dynamic_sidebar('over_footer');
+				echo '</div>';
+			}
+		?>
 		<?php if($prl_data['footer_widget']!='Disable'):?>
 		<div class="footer-widget">
 			<div class="prl-container">

@@ -182,6 +182,18 @@ content: none;
 .prl-list-category .list-thumbnail {
 	margin-bottom: 0px;
 }
+/**  Over footer widget aread ***/
+
+#over_footer_wrap {   // used for yellow page ads.
+	background-color: $yellow-page-bkg;
+  padding-top: 20px;
+	padding-bottom: 20px;
+	.flex-ad-container {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
 /* Footer/COPYRIGHT */
 
 #footer {

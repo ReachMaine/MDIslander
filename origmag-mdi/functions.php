@@ -101,6 +101,14 @@ if ( function_exists('register_sidebar') ){
 			'before_widget' => '<div id="%1$s" class=" %2$s obit-ad-container">',
 			'after_widget'  => '</div>'
 		));
+		// new above footer widget area (used for yellow page ads...) zig 13Aug18
+		register_sidebar(array(
+			'name' => 'Over Footer',
+			'id' => 'over_footer',
+			'description' => 'Widget area above the footer under both Content And Sidebar.',
+			'before_widget' => '<div id="%1$s" class=" %2$s eai-overfooter-container">',
+			'after_widget'  => '</div>'
+		));
 	}
 
 	function zig_remove_columns( $columns ) {
