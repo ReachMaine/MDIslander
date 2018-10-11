@@ -148,6 +148,14 @@ content: none;
 	margin-bottom: 0px;
 	font-size: 15px;
 }
+.widget.eai-two-col-menu {
+	ul.menu {
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+	}
+
+}
 
 /* the Author tabs section at bottom of single posts */
 #ts-fab-below {
