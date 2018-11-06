@@ -354,6 +354,7 @@ function remove_cfs() {
 
  if ( is_admin() && post_type_supports( $post_type, 'custom-fields' ) ) {
 	remove_meta_box( 'postcustom', 'post', 'normal' );
+	remove_meta_box( 'postcustom', 'page', 'normal' );
 	}
  }
 
