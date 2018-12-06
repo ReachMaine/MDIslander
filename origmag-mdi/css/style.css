@@ -591,6 +591,10 @@ input.gsc-search-button-v2 {
   img.mdi-expandable:hover {
     box-shadow: 0 0 10px #555;
     cursor: pointer; } }
+/* styling for ads, mostly broadstreet */
+.eai-video-ad .fluid-width-video-wrapper {
+  position: static !important; }
+
 /* =Theme customization starts here */
 /* Main Menu */
 #nav.prl-navbar #sf-menu {
