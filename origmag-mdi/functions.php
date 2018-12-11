@@ -92,6 +92,14 @@ if ( function_exists('register_sidebar') ){
 			'before_widget' => '<div class="prl-span-12"><div id="%1$s" class=" %2$s ad-container">',
 			'after_widget'  => '</div></div>'
 		));
+			//  bottom content widget area for single posts.
+		register_sidebar(array(
+			'name' => 'Single Bottom WidgetArea',
+			'id' => 'single_bottom_widgetarea',
+			'description' => 'Widget at bottom of single post.',
+			'before_widget' => '<div id="%1$s" class=" %2$s post-bottom-widget-container">',
+			'after_widget'  => '</div>'
+		));
 
 		// new bottom content widget area for obits.
 		register_sidebar(array(

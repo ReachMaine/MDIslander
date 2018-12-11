@@ -16,6 +16,7 @@
 	14Nov14 zig - use post_thumbname & featured image caption function, move pic to top
 	24Nov14 zig - add meta tag for image for google custom search
 	24Nov14 zig - make featured image the default again (change =='Enable'  to !='Disable')
+  10Dec18 zig - add bottom widget area.
  */
 ?>
 <?php get_header();?>
@@ -87,7 +88,11 @@
 						   <?php edit_post_link(__('Edit','presslayer'),'<p>','</p>'); ?>
 
 						   <?php if(isset($prl_data['banner_after_single_content']) && $prl_data['banner_after_single_content']!='') echo '<div class="hide-mobile"><center class="ad-container ad-in-content">'.stripslashes($prl_data['banner_after_single_content']).'</center></div>';?>
-
+               <?php if (is_active_sidebar('single_bottom_widgetarea')) {
+                 	echo '<div id="under_content_widget_wrap" class="prl-container">';
+         			     dynamic_sidebar( 'single_bottom_widgetarea' );
+                   echo "</div>";
+             	} ?>
 						</div>
 					</div>
 
