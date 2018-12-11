@@ -727,7 +727,9 @@ img.bs-expandable-expanded {
 #over_footer_wrap {
   background-color: rgba(255, 255, 102, 0.67);
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px; }
   #over_footer_wrap .flex-ad-container {
     display: flex;
     justify-content: space-between; }

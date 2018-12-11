@@ -10,7 +10,7 @@
 	<footer id="footer">
 		<?php
 			if (is_active_sidebar('over_footer')) {
-				echo '<div id="over_footer_wrap" class="prl-container">';
+				echo '<div id="over_footer_wrap" >';
 				dynamic_sidebar('over_footer');
 				echo '</div>';
 			}
