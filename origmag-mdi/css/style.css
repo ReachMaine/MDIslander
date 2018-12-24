@@ -595,6 +595,21 @@ input.gsc-search-button-v2 {
 .eai-video-ad .fluid-width-video-wrapper {
   position: static !important; }
 
+/* ------------------------------------
+Styling for the Our Town block on home page.
+------------------------------------ */
+#ea-our-town {
+  border: 4px solid #e0e0e0;
+  padding: 0 8px; }
+  #ea-our-town .aq-template-wrapper h5:empty {
+    display: none; }
+  #ea-our-town .aq-template-wrapper h5.prl-block-title {
+    border-top: 0px;
+    padding-bottom: 10px; }
+  #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta .dsq-postid,
+  #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta .comments-link {
+    display: none; }
+
 /* =Theme customization starts here */
 /* Main Menu */
 #nav.prl-navbar #sf-menu {

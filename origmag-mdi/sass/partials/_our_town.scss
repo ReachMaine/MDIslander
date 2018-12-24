@@ -1,0 +1,27 @@
+/* ------------------------------------
+Styling for the Our Town block on home page.
+------------------------------------ */
+
+#ea-our-town { // div around template
+  //background-color: rgba(77, 128, 19, 0.24);
+  border: 4px solid #e0e0e0;
+  padding: 0 8px;
+  .aq-template-wrapper {
+    h5:empty {
+      display: none;
+    }
+    h5.prl-block-title  {
+      border-top: 0px; // hide border at top of title (dont need it with color or border)
+      //text-align: center;
+      padding-bottom: 10px;
+    }
+    article.prl-article {
+      .prl-article-meta {
+        .dsq-postid,
+        .comments-link {
+          display: none;
+        }
+      }
+    }
+  }
+}
