@@ -606,9 +606,11 @@ Styling for the Our Town block on home page.
   #ea-our-town .aq-template-wrapper h5.prl-block-title {
     border-top: 0px;
     padding-bottom: 10px; }
-  #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta .dsq-postid,
-  #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta .comments-link {
+  #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta {
     display: none; }
+    #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta .dsq-postid,
+    #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta .comments-link {
+      display: none; }
 
 /* =Theme customization starts here */
 /* Main Menu */
