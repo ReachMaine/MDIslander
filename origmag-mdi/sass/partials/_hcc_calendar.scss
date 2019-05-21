@@ -1,0 +1,35 @@
+
+/* styling eai_custom_functions calendar widget hcc_list */
+aside .widget_hcc_list {
+
+	h5.prl-block-title,
+	h2.widgettitle {
+		border-bottom: 1px solid #DDD;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	ul.hcc_event_list {
+		padding: 10px 10px 0 10px;
+		li.hcc_event {
+			list-style: none;
+			padding-bottom: 10px;
+
+			.hcc_event_title {
+				line-height: 20px;
+				margin-bottom: 3px;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.hcc_event_venue, .hcc_event_datetime{
+					color: #484848;
+			}
+		}
+		li:not(:last-child) {
+
+		}
+	}
+	a.hcc_seeall {
+		font-weight: bold;
+		padding-left: 10px;
+	}
+} // widget
