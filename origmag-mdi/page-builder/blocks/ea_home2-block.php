@@ -3,6 +3,7 @@
 /* 	29Sept14 zig
 		- copy of home2 block s.t. we can link to a different category for the more & the title
 		used for More Headlines can go to "News"  instead of just more headlines.
+			 20Aug19 - zig add , 'no_found_rows' => TRUE for query  optimization.
 */
 class ea_home2 extends AQ_Block {
 
@@ -96,7 +97,7 @@ class ea_home2 extends AQ_Block {
     <div class="prl-grid prl-grid-divider">
 
 		<?php
-		$recent_posts = new WP_Query(array('post_type' => 'post','showposts' => 4,'post__not_in' => get_option('sticky_posts'),'cat' => $category));
+		$recent_posts = new WP_Query(array('post_type' => 'post','showposts' => 4,'post__not_in' => get_option('sticky_posts'),'cat' => $category, 'no_found_rows' => TRUE));
 		$p=0;
 		while($recent_posts->have_posts()): $recent_posts->the_post();
 		$p++;

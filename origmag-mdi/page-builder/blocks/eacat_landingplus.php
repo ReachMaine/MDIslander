@@ -10,6 +10,7 @@
 			until unstuck or a more recent 'stuck' article
 
    6Nov16  - zig Add widget area under featured box (before other )
+	 20Aug19 - zig add , 'no_found_rows' => TRUE for query  optimization. 
 **/
 if (!class_exists('eacat_landingplus')) {
 	class eacat_landingplus extends AQ_Block {
@@ -127,7 +128,7 @@ if (!class_exists('eacat_landingplus')) {
 			/* get most recent post tagged with '_stickit' in given category */
 			$p=0; /* count of post displayed */
 			/* $stay_post = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'), 'cat' => $category, 'tag' => '_stickit')); */
-			$stay_post = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'), 'category__in' => $cats, 'tag' => '_stickit'));
+			$stay_post = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'), 'category__in' => $cats, 'tag' => '_stickit', 'no_found_rows' => TRUE));
 
 			$gotone= false;
 			while($stay_post->have_posts()): $stay_post->the_post();
@@ -145,7 +146,7 @@ if (!class_exists('eacat_landingplus')) {
 
 			/* get 5 incase one of the them is the featured post */
 			/*$recent_posts = new WP_Query(array('post_type' => 'post','showposts' => 11,'post__not_in' => get_option('sticky_posts'),'category_name' => $catobj->slug)); */
-			$recent_posts = new WP_Query(array('post_type' => 'post','showposts' => 5,'post__not_in' => get_option('sticky_posts'),'category__in' => $cats, 'orderby' => 'date')); /* modified*/
+			$recent_posts = new WP_Query(array('post_type' => 'post','showposts' => 5,'post__not_in' => get_option('sticky_posts'),'category__in' => $cats, 'orderby' => 'date' , 'no_found_rows' => TRUE)); /* modified*/
 			$done_feat = false;
 			if (!$gotone) {
 				/* find the first one with a thumnail */
@@ -197,7 +198,7 @@ if (!class_exists('eacat_landingplus')) {
 			foreach ($cat_children as $ccat) {
 				$cats[] = (int) $ccat->term_id;
 			}
-	        $recent_posts1 = new WP_Query(array('post_type' => 'post','showposts' => 10,'post__not_in' => get_option('sticky_posts'),'category__in' => $cats,));
+	        $recent_posts1 = new WP_Query(array('post_type' => 'post','showposts' => 10,'post__not_in' => get_option('sticky_posts'),'category__in' => $cats, 'no_found_rows' => TRUE));
 	       // var_dump($recent_posts1->posts);
 			if ($recent_posts1->have_posts()) {
 				?>
