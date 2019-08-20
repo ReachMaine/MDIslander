@@ -39,7 +39,7 @@ function mysite_opengraph_image_size($val) {
 	return 'facebook_share';
 }
 
-add_action('after_setup_theme', ea_setup);
+add_action('after_setup_theme', 'ea_setup');
 require_once(get_stylesheet_directory().'/inc/eai_custom_functions.php');
 //require_once(get_stylesheet_directory().'/inc/eai_election_results.php');
 require_once(get_stylesheet_directory().'/inc/eai_leaky.php');
