@@ -15,7 +15,7 @@
 		12Sept17 TimS - Added Vollkorn Google Font
 		13sept17 zig - change technavia scripts
 		6Nove17 zig - change references to reachdowneast.com to downeastmaine.com
-
+  	30Aug19 zig - only load paywall scripts & var for post
 */
 global $theme_url, $prl_data; ?>
 <!DOCTYPE html>
@@ -41,10 +41,13 @@ global $theme_url, $prl_data; ?>
 		<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">
     <script data-cfasync="false" type="text/javascript" src="https://cdn.broadstreetads.com/init.js"></script>
     <?php /* technavia header script  */
-	if (!is_singular('post')) { 	?>
+	/* if (!is_singular('post')) { 	?>
 		<script data-cfasync="false" type="text/javascript" >var ta_cat = "not_post"; </script>
-	<?php }  ?>
-   <script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script>
+	<?php }  */ ?>
+	<?php /* zig 30 Aug 19 only add  paywall scripts on single posts  */
+	if ( is_singular('post') ) { ?>
+   	<script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script>
+	<?php } ?>
 	 <?php /* <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script> */ ?>
 <?php wp_head();?>
 	<?php if ( is_home() || is_front_page() )  { ?>
@@ -113,7 +116,7 @@ $body_class = array('Boxed'=>'site-boxed', 'Wide'=>'site-wide');
 					<?php  } if($prl_data['header_time']!='Disable'){  $current_site = get_current_site(); ?>
 					<span class="prl-header-time"><a href="https://www.downeastmaine.com/calendar/events/today/"><i class="fa fa-calendar"></i><?php echo date('l');?> - <?php echo date('M d, Y');?></a></span>
 					<?php } ?>
-					<?php echo eai_technav_loginmenu(); ?>
+					<?php if (is_singular('post')) { echo eai_technav_loginmenu();} /* zig only o need to login if post */ ?>
 				</div>
 				<div class="prl-header-social">
 					<?php if($prl_data['header_facebook']!=''){?><a href="<?php echo $prl_data['header_facebook'];?>" class="fa fa-facebook" title="Facebook" target="_blank"></a><?php }?>
