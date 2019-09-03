@@ -42,7 +42,9 @@
 </div><!-- .site-wrapper -->
 	<?php if($prl_data['switcher']=='Enable') include ('_switcher/index .php');?>
 	<a id="toTop" href="#"><i class="fa fa-long-arrow-up"></i></a>
-	<script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;v=0"></script>
+	<?php if ( is_singular('post') ) { ?>
+		<script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;v=0"></script>
+	<?php } ?>
 	<?php /* technavia footer script */
 	if (!is_singular('post')) { 	?>
 	<?php }  ?>

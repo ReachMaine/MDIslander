@@ -2,6 +2,7 @@
 /* 11Aug14 zig - A get a set of posts that has anyone of the given tags
 	Not sure how to convert a comma deliminated string of tag names to an array of tag_ids as int.  TBD
 	7Jan14 zig - include obits in the wp_query for community pages (and rename this)
+	3Sept19 zig 'no_found_rows' => TRUE
  **/
 class ea_multitag_cols extends AQ_Block {
 
@@ -161,7 +162,7 @@ class ea_multitag_cols extends AQ_Block {
 				$tagg[] = (int) $tag;
 			}
 
-			$tag_posts = new WP_Query(array('post_type' => array('post','obituary'),'showposts' => $post_count, 'post__not_in' => get_option('sticky_posts'),'tag__in' => $tagg,'orderby' => 'date' ));
+			$tag_posts = new WP_Query(array('post_type' => array('post','obituary'),'showposts' => $post_count, 'post__not_in' => get_option('sticky_posts'),'tag__in' => $tagg,'orderby' => 'date', 'no_found_rows' => TRUE ));
 			//var_dump($tag_posts->request);echo '-- $query request<br>';
 			if ($tag_posts->have_posts()) {
 				while($tag_posts->have_posts()): $tag_posts->the_post();

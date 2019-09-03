@@ -1,15 +1,16 @@
-<?php 
+<?php
 /* template mods:
 special archive display for the living category s.t. we can do special stuff
   - categorY ids are different for MDI.
-  2 Oct 14 zig - filter out tv listings 
+  2 Oct 14 zig - filter out tv listings
+	28Aug19 zig 	add 'no_found_rows' => TRUE to WP query for optimization.
 */
 	global $pl_data, $theme_url;
 
-	if (have_posts()) :?>	 	
+	if (have_posts()) :?>
 		<h3 class="prl-archive-title"><?php single_cat_title(); ?></h3>
 
-		<?php 
+		<?php
 		// get current page we are on. If not set we can assume we are on page 1.
 		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		// are we on page one?
@@ -20,34 +21,34 @@ special archive display for the living category s.t. we can do special stuff
 			$spec_cat1 = 116;   // weddings & engagements;
 			$spec_cat2 = 63;  	// dvd reviews (for now)
 			$spec_cat3 = 43;    // auto revies
-			$nopost_cat = 113;  // tvlistings 
+			$nopost_cat = 113;  // tvlistings
 
 			/* build the special category blocks the ids of the special category */
-			$recent_post1 = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'),'cat' => $spec_cat1));
-			while($recent_post1->have_posts()): $recent_post1->the_post(); 
+			$recent_post1 = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'),'cat' => $spec_cat1, 'no_found_rows' => TRUE));
+			while($recent_post1->have_posts()): $recent_post1->the_post();
 				$cat1_out = eai_build_postcol(3, get_cat_name( $spec_cat1 )/* column title */, false/* excerpt */,true /* meta */, true /* date only*/);
 				$displayed[] = get_the_ID();
-			endwhile; 
+			endwhile;
 			wp_reset_query();
-			
-			$recent_post2 = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'),'cat' => $spec_cat2));
-			while($recent_post2->have_posts()): $recent_post2->the_post(); 
+
+			$recent_post2 = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'),'cat' => $spec_cat2, 'no_found_rows' => TRUE));
+			while($recent_post2->have_posts()): $recent_post2->the_post();
 				$cat2_out = eai_build_postcol(3, get_cat_name( $spec_cat2 )/* column title */, false/* excerpt */, true /* meta */, true /* date only*/ );
 				$displayed[] = get_the_ID();
-			endwhile; 
-			wp_reset_query(); 
+			endwhile;
+			wp_reset_query();
 
-			$recent_post3 = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'),'cat' => $spec_cat3));
-			while($recent_post3->have_posts()): $recent_post3->the_post(); 
+			$recent_post3 = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'),'cat' => $spec_cat3, 'no_found_rows' => TRUE));
+			while($recent_post3->have_posts()): $recent_post3->the_post();
 				$cat3_out = eai_build_postcol(3, get_cat_name( $spec_cat3 )/* column title */, false/* excerpt */, true /* meta */, true /* date only*/);
 				$displayed[] = get_the_ID();
-			endwhile; 
-			wp_reset_query();    
-			
+			endwhile;
+			wp_reset_query();
+
  			echo '<div class="prl-grid prl-grid-divider eacat-living">';
 			/* get most recent post tagged with '_stickit' in given category */
 			$p = 0;
-			$stay_post = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'), 'cat' => $category, 'tag' => '_stickit'));  		
+			$stay_post = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'), 'cat' => $category, 'tag' => '_stickit', 'no_found_rows' => TRUE));
 			$gotone = false;
 			while($stay_post->have_posts()): $stay_post->the_post();
 				$displayed[] =  get_the_ID();
@@ -60,15 +61,15 @@ special archive display for the living category s.t. we can do special stuff
 
 			if (!$gotone) {
 				/* find the first one with a thumnail */
-				while (have_posts()) : the_post(); 
+				while (have_posts()) : the_post();
 					if ( (!$gotone) && has_post_thumbnail(get_the_ID()) && !(in_category($nopost_cat))  ) {
 						 /* echo '<p>post '.get_the_ID().' has a thumbnail gotit. </p>';  */
 						 $gotone = true;
 						eai_do_feat(false/*meta*/, true /*excerpt*/);
 						 $displayed[]= get_the_ID();
-					} 
+					}
 				endwhile;
-			} 
+			}
 
 			wp_reset_postdata();
 			/* do the next 3, the rest of the top box */
@@ -76,36 +77,36 @@ special archive display for the living category s.t. we can do special stuff
 				echo '<div class="prl-span-3"><ul class="prl-list prl-list-line" >';
 				while  (have_posts() && ($p < 3))  : the_post();
 
-					 if ( !in_array(get_the_ID(), $displayed) && !(in_category($nopost_cat)) )  { 
+					 if ( !in_array(get_the_ID(), $displayed) && !(in_category($nopost_cat)) )  {
 						/* <li style="list-style-type:none"><h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo post_thumb(get_the_ID(),150, 0, true);?></a><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title();?></a> <?php echo get_label_format(get_the_ID());?> <?php echo get_label_meta(get_the_ID());?></h4></li><?php */
 						echo '<li style="list-style-type:none">';
 						echo eai_build_post(false /* excerpt */,'',true/*meta*/, true /* date only*/);
 						echo '</li>';
-					    $p++; 
-					 } 
-		        endwhile; 
+					    $p++;
+					 }
+		        endwhile;
 		        echo ' </ul></div>';
 	        }
-	        // wp_reset_query(); 
+	        // wp_reset_query();
 	        echo '</div>';
 	        echo '<hr/>'; /* end of top block*/
 
-	        /* do the next three as columns */ 
+	        /* do the next three as columns */
 	        if (have_posts()) {
 
 	        	echo '<div class="prl-span-12">';
 	        	echo '<div class="prl-grid prl-grid-divider">';
-	        	 $p = 0; 
+	        	 $p = 0;
 		    	while  (have_posts() && ($p < 3))  : the_post();
-		    		if ( !in_array(get_the_ID(), $displayed) && !(in_category($nopost_cat)) )  { 
+		    		if ( !in_array(get_the_ID(), $displayed) && !(in_category($nopost_cat)) )  {
 		    				echo eai_build_postcol(3 /* columns*/, ''/* column title */, false/* excerpt */, true /* meta */, true /* date only*/);
-						    $p++; 
-					 } 
-				endwhile; 
+						    $p++;
+					 }
+				endwhile;
 				echo '</div>';
 				echo '</div>';
 	        }
-	       
+
 	        /* do the 3 'special' categories */
 
 	        echo '<hr/>';
@@ -113,7 +114,7 @@ special archive display for the living category s.t. we can do special stuff
 	        echo $cat1_out;
 	        echo $cat2_out;
 	        echo $cat3_out;
-	        echo '</div>';  
+	        echo '</div>';
 	       	echo '<hr/>';
 
 	        /* do any remaining post as list */
@@ -122,17 +123,23 @@ special archive display for the living category s.t. we can do special stuff
 	        	echo '<hr/>';
 	        	echo '<ul class="prl-list-category">';
 	        	while  (have_posts() )  : the_post();
-		    		if ( !in_array(get_the_ID(), $displayed) && !(in_category($nopost_cat)) )  { 
+		    		if ( !in_array(get_the_ID(), $displayed) && !(in_category($nopost_cat)) )  {
 		    				echo eai_build_postli(true/* excerpt */, 'list-thumbnail' /*image class */, true /* date only */);
-						    $p++; 
-					 } 
-				endwhile; 
+						    $p++;
+					 }
+				endwhile;
 				echo '<hr/>';
 	        }
-	        if ( function_exists( 'page_navi' ) ) page_navi( 'items=5&amp;show_num=1&amp;num_position=after' );   	
+	        if ( function_exists( 'page_navi' ) ) {
+						page_navi( 'items=5&amp;show_num=1&amp;num_position=after' );
+					} else {
+						echo '<div class="alignright">';
+							next_posts_link( 'Next &raquo;', '' );
+						echo '</div>';
+					}
 		} else {   ?>
 		     <ul class="prl-list-category">
-			<?php 
+			<?php
 			$i=0;
 			while (have_posts()) : the_post();
 			$i++;
@@ -143,7 +150,7 @@ special archive display for the living category s.t. we can do special stuff
 					<div class="list-thumbnail"><?php echo post_thumb(get_the_ID(),520, 360, true);?></div>
 					<?php endif;?>
 					<div class="prl-article-entry">
-						<h2 class="prl-article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> <?php echo get_label_format(get_the_ID());?> <?php echo get_label_meta(get_the_ID()); ?></h2> 
+						<h2 class="prl-article-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> <?php echo get_label_format(get_the_ID());?> <?php echo get_label_meta(get_the_ID()); ?></h2>
 						<?php if (is_category('Obituaries')) { post_meta(true, false, false, false, false); } else  { post_meta(true, true, true, true, false); } ?>
 						<?php the_excerpt();?>
 					</div>
@@ -151,11 +158,22 @@ special archive display for the living category s.t. we can do special stuff
 			</li>
 
 			<?php endwhile; ?>
-			
+
 			</ul>
-			<?php if ( function_exists( 'page_navi' ) ) page_navi( 'items=5&amp;show_num=1&amp;num_position=after' ); ?>
+			<?php if ( function_exists( 'page_navi' ) ) {
+					page_navi( 'items=5&amp;show_num=1&amp;num_position=after' );  }
+					else {
+						/* echo '<div class="navigation">'; */
+						echo '<div class="alignleft">';
+							previous_posts_link( '&laquo; Previous ' );
+						echo '</div>';
+						echo '<div class="alignright">';
+							next_posts_link( 'Next &raquo;', '' );
+						echo '</div>';
+					}
+			?>
 
 	<?php  } /* end of page > 1 */
-	else : /* dont have posts */ ?> 
+	else : /* dont have posts */ ?>
 	<?php get_search_form(); ?>
-<?php endif; ?>  
+<?php endif; ?>
