@@ -16,6 +16,7 @@
 		13sept17 zig - change technavia scripts
 		6Nove17 zig - change references to reachdowneast.com to downeastmaine.com
   	30Aug19 zig - only load paywall scripts & var for post
+		8Nov19 - zig remove broadstreet init - using plugin now.
 */
 global $theme_url, $prl_data; ?>
 <!DOCTYPE html>
@@ -39,7 +40,6 @@ global $theme_url, $prl_data; ?>
 	<link rel="shortcut icon" href="<?php echo trim($prl_data['site_fav']);?>">
 	<?php } ?>
 		<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">
-    <script data-cfasync="false" type="text/javascript" src="https://cdn.broadstreetads.com/init.js"></script>
     <?php /* technavia header script  */
 	/* if (!is_singular('post')) { 	?>
 		<script data-cfasync="false" type="text/javascript" >var ta_cat = "not_post"; </script>

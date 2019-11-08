@@ -1,0 +1,75 @@
+// sytling for ads (broadstreet or otherwise)
+
+.eai-ad-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.ads_top {
+  margin-top: 20px;
+}
+.ads_top.ad-container img, // box shadown on ad img (instead of div s.t. if doent fit container looks ok.)
+.eai-ad-container.eai-ad-across img {
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
+  -moz-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
+  box-shadow: 5px 5px 15px 0px grey;
+}
+.eai-ad-container.eai-ad-right img {
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
+  -moz-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
+  box-shadow: 5px 5px 15px 0px grey;
+}
+.eai-ad-container.eai-ad-left img {
+  -webkit-box-shadow: -5px 5px 15px 0px rgba(128,128,128,1);
+  -moz-box-shadow: -5px 5px 15px 0px rgba(128,128,128,1);
+  box-shadow: -5px 5px 15px 0px grey;
+}
+
+.eai-countdown-bold {
+	.bs-countdown {
+		.bs-countdown-text {
+			font-weight: 900!important;
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) { // wide screen (25px margin on container)
+  .eai-ad-300w {
+    //min-width: 300px;
+    width: 300px;
+  }
+  .eai-ad-300w.eai-ad-right {
+    margin-left: -10px;
+  }
+  .eai-ad-300w.eai-ad-right.eai-right-rail {
+    margin-left: -20px; // for reg sidebars (i.e. not new homepage)
+  }
+  .eai-ad-300w.eai-ad-left {
+    margin-left: -40px;
+  }
+}
+@media only screen and (max-width: 1199px) and (min-width: 769px){ // med (20px margin on container)
+  .eai-ad-300w {
+
+  }
+  .eai-ad-300w.eai-ad-left {
+    margin-right: -15px;
+    margin-left: -10px;
+  }
+
+  .eai-ad-300w.eai-ad-right {
+    margin-right: -10px;
+    margin-left: -15px;
+
+  }
+}
+
+@media only screen and (max-width: 768px) { // mobile
+  .eai-ad-container {
+    text-align: center;
+  }
+  .eai-ad-300w {
+    //min-width: 300px;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+}

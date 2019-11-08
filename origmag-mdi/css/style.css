@@ -595,6 +595,9 @@ input.gsc-search-button-v2 {
 .eai-video-ad .fluid-width-video-wrapper {
   position: static !important; }
 
+.ad-container.ad-in-content {
+  padding-right: 3px; }
+
 /* ------------------------------------
 Styling for the Our Town block on home page.
 ------------------------------------ */
@@ -612,6 +615,59 @@ Styling for the Our Town block on home page.
     #ea-our-town .aq-template-wrapper article.prl-article .prl-article-meta .comments-link {
       display: none; }
 
+.eai-ad-container {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.ads_top {
+  margin-top: 20px; }
+
+.ads_top.ad-container img,
+.eai-ad-container.eai-ad-across img {
+  -webkit-box-shadow: 5px 5px 15px 0px gray;
+  -moz-box-shadow: 5px 5px 15px 0px gray;
+  box-shadow: 5px 5px 15px 0px grey; }
+
+.eai-ad-container.eai-ad-right img {
+  -webkit-box-shadow: 5px 5px 15px 0px gray;
+  -moz-box-shadow: 5px 5px 15px 0px gray;
+  box-shadow: 5px 5px 15px 0px grey; }
+
+.eai-ad-container.eai-ad-left img {
+  -webkit-box-shadow: -5px 5px 15px 0px gray;
+  -moz-box-shadow: -5px 5px 15px 0px gray;
+  box-shadow: -5px 5px 15px 0px grey; }
+
+.eai-countdown-bold .bs-countdown .bs-countdown-text {
+  font-weight: 900 !important; }
+
+@media only screen and (min-width: 1200px) {
+  .eai-ad-300w {
+    width: 300px; }
+
+  .eai-ad-300w.eai-ad-right {
+    margin-left: -10px; }
+
+  .eai-ad-300w.eai-ad-right.eai-right-rail {
+    margin-left: -20px; }
+
+  .eai-ad-300w.eai-ad-left {
+    margin-left: -40px; } }
+@media only screen and (max-width: 1199px) and (min-width: 769px) {
+  .eai-ad-300w.eai-ad-left {
+    margin-right: -15px;
+    margin-left: -10px; }
+
+  .eai-ad-300w.eai-ad-right {
+    margin-right: -10px;
+    margin-left: -15px; } }
+@media only screen and (max-width: 768px) {
+  .eai-ad-container {
+    text-align: center; }
+
+  .eai-ad-300w {
+    max-width: 300px;
+    margin: 20px auto; } }
 /* =Theme customization starts here */
 /* Main Menu */
 #nav.prl-navbar #sf-menu {
