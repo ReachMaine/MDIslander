@@ -668,6 +668,25 @@ Styling for the Our Town block on home page.
   .eai-ad-300w {
     max-width: 300px;
     margin: 20px auto; } }
+/* css styling for new homepage template - Oct 2019
+ */
+.page-template-page-EAhome {
+  background-color: #f3f3f3; }
+  .page-template-page-EAhome .site-wrapper {
+    border: 1px solid #e1e1e1; }
+
+.eai-content-row {
+  margin-bottom: 20px; }
+
+article .eaihome-post-cat {
+  background-color: #e1e1e1;
+  padding: 5px 7px; }
+  article .eaihome-post-cat a {
+    color: #333;
+    letter-spacing: 1px; }
+article .eaihome-img {
+  width: 100%; }
+
 /* =Theme customization starts here */
 /* Main Menu */
 #nav.prl-navbar #sf-menu {
