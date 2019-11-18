@@ -4,6 +4,7 @@ special archive display for the living category s.t. we can do special stuff
   - categorY ids are different for MDI.
   2 Oct 14 zig - filter out tv listings
 	28Aug19 zig 	add 'no_found_rows' => TRUE to WP query for optimization.
+	18Nov19 zig - no longer using stickit tag for living.
 */
 	global $pl_data, $theme_url;
 
@@ -19,7 +20,7 @@ special archive display for the living category s.t. we can do special stuff
 			$displayed = array();
 			$category = 79;     // living category
 			$spec_cat1 = 116;   // weddings & engagements;
-			$spec_cat2 = 63;  	// dvd reviews (for now)
+			$spec_cat2 = 227;  	// nature
 			$spec_cat3 = 43;    // auto revies
 			$nopost_cat = 113;  // tvlistings
 
@@ -48,13 +49,15 @@ special archive display for the living category s.t. we can do special stuff
  			echo '<div class="prl-grid prl-grid-divider eacat-living">';
 			/* get most recent post tagged with '_stickit' in given category */
 			$p = 0;
-			$stay_post = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'), 'cat' => $category, 'tag' => '_stickit', 'no_found_rows' => TRUE));
 			$gotone = false;
+			/* zig xout 18Nov19
+			$stay_post = new WP_Query(array('post_type' => 'post','showposts' => 1,'post__not_in' => get_option('sticky_posts'), 'cat' => $category, 'tag' => '_stickit', 'no_found_rows' => TRUE));
+
 			while($stay_post->have_posts()): $stay_post->the_post();
 				$displayed[] =  get_the_ID();
 				$gotone=true;
-				eai_do_feat(false/*meta*/, true /*excerpt*/); ?>
-			<?php endwhile;  /* */
+				eai_do_feat(false, true ); ?>
+			<?php endwhile;  */
 
 			wp_reset_postdata();
 			/*wp_reset_query(); */
