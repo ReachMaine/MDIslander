@@ -855,10 +855,8 @@ img.bs-expandable-expanded {
 #footer .copyright .left {
   width: auto; }
 
-.zcal_out {
-  width: 40%; }
-  .zcal_out .zcal_date_group, .zcal_out .zcal_city_group {
-    text-align: center; }
+.zcal_out .zcal_date_group, .zcal_out .zcal_city_group {
+  text-align: center; }
 
 /* my calendar width */
 aside .widget_hcclist h2.widgettitle {
