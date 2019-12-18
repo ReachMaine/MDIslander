@@ -17,6 +17,7 @@
 		6Nove17 zig - change references to reachdowneast.com to downeastmaine.com
   	30Aug19 zig - only load paywall scripts & var for post
 		8Nov19 - zig remove broadstreet init - using plugin now.
+		18Dec19 - zig remove $current_site & fix dangling open <div>
 */
 global $theme_url, $prl_data; ?>
 <!DOCTYPE html>
@@ -107,13 +108,14 @@ $body_class = array('Boxed'=>'site-boxed', 'Wide'=>'site-wide');
 				</nav>
 
 			</div> <?php /* end pr1-container for top menu & search */ ?>
-			<div class="prl-container top-header"><div class="masthead-bg clearfix">
+			<div class="prl-container top-header">
+				<div class="masthead-bg clearfix">
 				<div class="prl-header-logo"><a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php echo sitelogo();?>" alt="<?php bloginfo('name'); ?>" /></a>
 				</div>
 				<div class="prl-header-mid">
 					<?php  if($prl_data['header_custom_text']!=''){?>
 					<span class="prl-header-custom-text"><?php echo trim($prl_data['header_custom_text']);?></span>
-					<?php  } if($prl_data['header_time']!='Disable'){  $current_site = get_current_site(); ?>
+					<?php  } if($prl_data['header_time']!='Disable'){  ?>
 					<span class="prl-header-time"><a href="https://www.downeastmaine.com/calendar/events/today/"><i class="fa fa-calendar"></i><?php echo date('l');?> - <?php echo date('M d, Y');?></a></span>
 					<?php } ?>
 					<?php if (is_singular('post')) { echo eai_technav_loginmenu();} /* zig only o need to login if post */ ?>
@@ -127,7 +129,7 @@ $body_class = array('Boxed'=>'site-boxed', 'Wide'=>'site-wide');
                     <?php if($prl_data['header_instagram']!=''){?><a href="<?php echo $prl_data['header_instagram'];?>" class="fa fa-instagram" title="Instagram"></a><?php }?>
                     <?php if($prl_data['header_youtube']!=''){?><a href="<?php echo $prl_data['header_youtube'];?>" class="youtube-pic" title="Youtube"><img src="<?php echo get_stylesheet_directory_uri().'/images/youtube.jpg'; ?>"></a><?php }?>
 				</div><!-- end of header social -->
-			<?php /*  </div> */ ?>
+			 </div>
 			</div>
 		</header>
 		<nav id="nav" class="prl-navbar" role="navigation">
