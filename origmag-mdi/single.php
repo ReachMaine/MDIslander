@@ -1,30 +1,14 @@
 <?php  /* template mods:
-	6Aug2014 zig
-		- Changed checking of pl_post_thumb from if not Disabled to if enabled.
-		- Changed featured image size to ea_featuredimg
-	7Aug2014 zig
-		- swapped the comments & the related posts s.t. comments come before related posts
-	8Aug2014 zig
-		- disabled views via  post_meta() arg
-	12Aug2014 zig
-		- move top banner ad to above the #main
-	2Oct2014 zig
-		- add breaking-news widget area.
-	7Oct2014 zig - add widget for top banner add, comment out top banner pull from theme options.
-	8Oct2014 zig - add class="ad-container" to bottom ad for styling.
-	20Oct2014 zig - dont show related content on obits
-	14Nov14 zig - use post_thumbname & featured image caption function, move pic to top
-	24Nov14 zig - add meta tag for image for google custom search
-	24Nov14 zig - make featured image the default again (change =='Enable'  to !='Disable')
-  10Dec18 zig - add bottom widget area.
+  8jan19 zig - reset.
  */
 ?>
 <?php get_header();?>
 <div class="prl-container">
     <div class="prl-grid prl-grid-divider">
-    	<?php /* if(isset($prl_data['banner_before_single_title']) && $prl_data['banner_before_single_title']!='') echo '<div id="single-top-ad" class="prl-span-12"> <div class="ads_top ad-container">'.stripslashes($prl_data['banner_before_single_title']).'</div></div>'; */ ?>
     	<?php if (is_active_sidebar('topbanner')) {
-			dynamic_sidebar( 'topbanner' );
+        echo '<div id="single-top-ad" class=prl-span-12>';
+			     dynamic_sidebar( 'topbanner' );
+        echo '</div>';
     	} ?>
         <section id="main" class="prl-span-9"> <!-- single -->
         	<?php if (is_active_sidebar('breaking-news')) {
@@ -41,30 +25,27 @@
 					<?php if( has_post_thumbnail() && get_post_meta($post->ID, 'pl_post_thumb', true)!='Disable') : ?>
 						<div class="single-post-thumbnail ">
 							<?php
-							/* the_post_thumbnail('ea_featuredimg');  */
-							//the_post_thumbnail('ea_featuredimg');
-							//the_post_thumbnail(array(1200,800));
 							the_post_thumbnail('ea_featuredimg');
 							$image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full-size'); // For pinterest sharing
 							?>
 						</div>
 						<div class="single-post-thumbnail-caption space-bot">
-							<?php cc_featured_image_caption(); ?>
+              <?php if (function_exists('cc_featured_image_caption') ) {
+								cc_featured_image_caption();
+							} ?>
 						</div>
 					<?php endif; ?>
 			   <h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 			   <hr class="prl-grid-divider">
 				<div class ="single-meta">
-			   		<?php if (in_category('Obituaries')) {
-						post_meta(true/*date*/, false/* author */, false /* comment */, false/*cat*/, false /* view */ ) ;
-			   		} else {
+			   		<?php
 			   			if (get_user_meta( $authordata->ID, 'ts_fab_user_hide', false )) {
 				   			post_meta(true/*date*/, false/* author */, false /* comment */, true /*cat*/, false /* view */ ) ;
 				   		} else {
 				   			post_meta(true, true, false, true, false);
 				   		} /* date, author, comments, cat, view, updated? */
-				   	} ?>
-			   		<?php ea_social_share();?>
+              ea_social_share();
+            ?>
 				</div>
 			   <hr class="prl-grid-divider">
 			   <div class="prl-grid">
@@ -72,23 +53,20 @@
 						<div class="prl-entry-content clearfix">
 
 						   <?php if($prl_data['show_excerpt']=='Enable') {?><strong><?php the_excerpt(); ?></strong><?php }?>
-						   <?php
-                  the_content();
-                  $relatedp = get_post_meta($post->ID, 'pl_related', true);
-                  if ($relatedp != 'Disable')  {
-                      echo '<div class="prl-span-12 '.$relatedp.'"><div class="yarpp-thumbnails-horizontal">';
-  			               related_posts();
-  			              echo '</div></div>';
-                  }
-						   ?>
-						   <?php /* embed_related_content(); echo '<!-- content -->'.$content; */ ?>
-						   <?php /* the_content(); */?>
+               
+               <?php if (strtoupper(get_post_meta($post->ID, 'eai_embed_ad', true)) !='FALSE')  {
+                    embed_ad_single(do_shortcode($prl_data['banner_before_single_title']));
+                 } else {
+                   the_content();
+                 }  ?>
 
 						   <?php wp_link_pages(array('before' => __('Pages','presslayer').': ', 'next_or_number' => 'number')); ?>
 						   <?php edit_post_link(__('Edit','presslayer'),'<p>','</p>'); ?>
 
-						   <?php if(isset($prl_data['banner_after_single_content']) && $prl_data['banner_after_single_content']!='') echo '<div class="hide-mobile"><center class="ad-container ad-in-content">'.stripslashes($prl_data['banner_after_single_content']).'</center></div>';?>
-               <?php if (is_active_sidebar('single_bottom_widgetarea')) {
+						   <?php if(isset($prl_data['banner_after_single_content']) && $prl_data['banner_after_single_content']!='') {
+                 echo '<div class="eai-ad-container eai-ad-across">'.do_shortcode(stripslashes($prl_data['banner_after_single_content'])).'</div>';
+               }
+               if (is_active_sidebar('single_bottom_widgetarea')) {
                  	echo '<div id="under_content_widget_wrap" class="prl-container">';
          			     dynamic_sidebar( 'single_bottom_widgetarea' );
                    echo "</div>";

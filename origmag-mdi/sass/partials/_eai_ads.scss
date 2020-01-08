@@ -24,6 +24,23 @@
   box-shadow: -5px 5px 15px 0px grey;
 }
 
+article broadstreet-zone-container broadstreet-zone, // inserted ad via broadstreet plugin -
+.eai-ad-container.eai-ad-incontent {
+  clear: both;
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    span:nth-of-type(2) {
+      padding-left: 15px;
+    }
+    img {
+      -webkit-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
+      -moz-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
+      box-shadow: 5px 5px 15px 0px grey;
+    }
+  }
+}
+
 .eai-countdown-bold {
 	.bs-countdown {
 		.bs-countdown-text {

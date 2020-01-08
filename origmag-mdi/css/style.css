@@ -638,6 +638,22 @@ Styling for the Our Town block on home page.
   -moz-box-shadow: -5px 5px 15px 0px gray;
   box-shadow: -5px 5px 15px 0px grey; }
 
+article broadstreet-zone-container broadstreet-zone,
+.eai-ad-container.eai-ad-incontent {
+  clear: both; }
+  article broadstreet-zone-container broadstreet-zone div,
+  .eai-ad-container.eai-ad-incontent div {
+    display: flex;
+    justify-content: space-evenly; }
+    article broadstreet-zone-container broadstreet-zone div span:nth-of-type(2),
+    .eai-ad-container.eai-ad-incontent div span:nth-of-type(2) {
+      padding-left: 15px; }
+    article broadstreet-zone-container broadstreet-zone div img,
+    .eai-ad-container.eai-ad-incontent div img {
+      -webkit-box-shadow: 5px 5px 15px 0px gray;
+      -moz-box-shadow: 5px 5px 15px 0px gray;
+      box-shadow: 5px 5px 15px 0px grey; }
+
 .eai-countdown-bold .bs-countdown .bs-countdown-text {
   font-weight: 900 !important; }
 
