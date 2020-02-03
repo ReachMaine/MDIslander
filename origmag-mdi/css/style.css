@@ -194,6 +194,7 @@ aside .widget .widget-title {
 #sidebar {
   float: left; }
 
+aside ul,
 #sidebar ul {
   padding-left: 0px; }
 
@@ -280,7 +281,7 @@ aside .widget-zbtlist ul.zbt-ad-list {
     .biz-today.horizontal aside.widget-zbzdir-list ul.zbzdir-biz-list li:last-child {
       padding-right: 0px; }
 
-/** end text-ads /biz toda ads 
+/** end text-ads /biz toda ads
 
 /* **** sidebar styling with boxes & icons *** */
 #sidebar .widget_advanced_menu,
@@ -623,17 +624,17 @@ Styling for the Our Town block on home page.
   margin-top: 20px; }
 
 .ads_top.ad-container img,
-.eai-ad-container.eai-ad-across img {
+.eai-ad-container.eai-ad-across broadstreet-zone {
   -webkit-box-shadow: 5px 5px 15px 0px gray;
   -moz-box-shadow: 5px 5px 15px 0px gray;
   box-shadow: 5px 5px 15px 0px grey; }
 
-.eai-ad-container.eai-ad-right img {
+.eai-ad-container.eai-ad-right broadstreet-zone {
   -webkit-box-shadow: 5px 5px 15px 0px gray;
   -moz-box-shadow: 5px 5px 15px 0px gray;
   box-shadow: 5px 5px 15px 0px grey; }
 
-.eai-ad-container.eai-ad-left img {
+.eai-ad-container.eai-ad-left broadstreet-zone {
   -webkit-box-shadow: -5px 5px 15px 0px gray;
   -moz-box-shadow: -5px 5px 15px 0px gray;
   box-shadow: -5px 5px 15px 0px grey; }

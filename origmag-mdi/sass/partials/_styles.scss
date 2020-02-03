@@ -40,7 +40,7 @@ header#masthead {
 						padding-right: 10px;
 					}
 				}
-				
+
 			}
 			.prl-header-social {
 				float:right;
@@ -56,7 +56,7 @@ header#masthead {
 			}
 		}
 	}
-	
+
 }
 #search_form-top.nav_search {
 	display:block;
@@ -64,7 +64,7 @@ header#masthead {
 #search_form.nav_search {
 	display: none;
 }
-#search_form.nav_search, 
+#search_form.nav_search,
 #search_form-top.nav_search {
 	input {
 		border: 1px solid $borderltgrey;
@@ -78,9 +78,9 @@ header#masthead {
 	ul {
 
 		li {
-	
+
 			 a {
-			
+
 			}
 		}
 	}
@@ -161,8 +161,8 @@ header#masthead {
 			li:not(:last-child) {
 				padding-bottom: 5px;
 				margin-bottom: 5px;
-				border-bottom: 1px solid $bordergrey; 
-				
+				border-bottom: 1px solid $bordergrey;
+
 			}
 			li {
 				.yarpp-thumbnail img {
@@ -180,13 +180,13 @@ header#masthead {
 				display: inline-block;
 				vertical-align: top;
 				.yarpp-thumbnail img {
-				
+
 				}
 			}
 		}
 	}
 }
-// testing menu 
+// testing menu
 
 .sf-menu li:not(.sf-mega-parent) li a {
 	// background-color: red!important; // this gets us there.
@@ -235,11 +235,12 @@ aside {
 #sidebar{
 	float:left;
 }
+aside ul, 
 #sidebar ul {
 	padding-left: 0px;
 
 }
-aside .widget .widget-title, 
+aside .widget .widget-title,
 aside .widget .prl-block-title {
 	text-align: center;
 	font-size: 16px;
@@ -261,10 +262,10 @@ aside .widget .prl-block-title {
 ul.zbzdir-biz-list {
 	padding-left: 0px;
 }
-aside .widget-zbtlist { 
+aside .widget-zbtlist {
 	ul.zbt-ad-list {
 		padding-left: 0px;
-		
+
 		.zbt-title {
 			//font-size: 14px;
 			font-size: 16px;
@@ -309,7 +310,7 @@ aside .widget-zbtlist {
 				//font-weight: bold;
 				display: block;
 				height: 35px;
-				
+
 			}
 			.zbt-content {
 				display: block;
@@ -324,12 +325,12 @@ aside .widget-zbtlist {
 		li:first-child {
 			padding-left: 0px;
 			border-left: 0px;
-		}	
+		}
 		li:last-child {
 			padding-right: 0px;
 		}
 	}
-	
+
 }
 .biz-today.horizontal aside.widget-zbzdir-list  { // styling for business today ads underneath content */
 	width: 100%;
@@ -348,24 +349,24 @@ aside .widget-zbtlist {
 			float: left;
 			padding-left: 2%;
 			padding-right: 2%;
-		} 
+		}
 		li:first-child {
 			padding-left: 0px;
 			border-left: 0px;
-		}	
+		}
 		li:last-child {
 			padding-right: 0px;
 		}
 	}
-	
+
 }
-/** end text-ads /biz toda ads 
+/** end text-ads /biz toda ads
 
 /* **** sidebar styling with boxes & icons *** */
 // add the border
 #sidebar .widget_advanced_menu,
 #sidebar .widget-recent-post,
-#sidebar .widget_awesomeweatherwidget, 
+#sidebar .widget_awesomeweatherwidget,
 #sidebar .widget-zbtlist,
 #sidebar .widget_hcclist,
 #sidebar #zsfw-authors {
@@ -399,7 +400,7 @@ aside .widget-zbtlist {
 	content: "\f073"; // fa-calendar
 }
 #sidebar .widget_awesomeweatherwidget::before {
-		content: "\f185"; //fa-sun-o 
+		content: "\f185"; //fa-sun-o
 	}
 #sidebar .widget-zbtlist::before {
 	content: "\f0f2"; // fa-suitcase
@@ -417,9 +418,9 @@ aside .widget-zbtlist {
 	font-size: 24px;
 	margin-top: 10px;
 }
-#sidebar .widget_awesomeweatherwidget > i, 
-#sidebar .widget-zbtlist > i, 
-#sidebar .widget_hcclist > i, 
+#sidebar .widget_awesomeweatherwidget > i,
+#sidebar .widget-zbtlist > i,
+#sidebar .widget_hcclist > i,
 #sidebar #zsfw-authors	> i {
 	margin-top: 10px;
 	margin-left: -25px;
