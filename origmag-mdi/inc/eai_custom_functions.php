@@ -253,7 +253,7 @@ function eai_post_meta($date = true, $author=true, $comment=true, $cat=true, $vi
 		function embed_ad_single($in_ad_str, $in_p_tag=5) {
 			$zcontent = apply_filters('the_content', get_the_content());
 			$zcontent1 = "";
-			$zad =  '<div class="eai-ad-container eai-ad-across eai-ad-incontent">'.do_shortcode($in_ad_str).'</div>';
+			$zad =  '<div class="eai-ad-container eai-ad-incontent">'.do_shortcode($in_ad_str).'</div>';
 			$zcontent2 = "";
 			if ( empty($in_ad_str) || empty($zcontent) ) { // disabled or no content....
 				$zcontent1 = $zcontent;
