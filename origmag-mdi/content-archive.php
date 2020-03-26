@@ -5,7 +5,8 @@
 	8Aug2014 zig:
 		- add params for post_meta to now show views
 */
-	global $pl_data, $theme_url;
+	global $pl_data, $theme_url,  $prl_data;
+	global $wp_query;
 	if (have_posts()) :?>
 
 	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
@@ -29,8 +30,13 @@
 	  	<h3 class="prl-archive-title"><?php _e('Search Results','presslayer');?></h3>
 	  <?php  } ?>
 
-     <ul class="prl-list-category">
+     <ul class="prl-list-category archive-plain">
 	<?php
+	$posts_count = $wp_query->post_count;
+	if ($posts_count > 0 ) {
+			$posts_first_half = floor(($posts_count+1)/2);
+	}
+
 	$i=0;
 	while (have_posts()) : the_post();
 	$i++;
@@ -50,21 +56,28 @@
 			</div>
 		</article>
 	</li>
-
-	<?php endwhile; ?>
+	<?php if ($i == $posts_first_half) {
+		//echo "<p>MIDDLE-ish.</p>";
+		 if(isset($prl_data['banner_before_single_title']) && $prl_data['banner_before_single_title']!='') {
+		 	echo '<div class="eai-ad-container eai-ad-incontent">'.do_shortcode(stripslashes($prl_data['banner_before_single_title'])).'</div>';
+		}
+	}
+ 	endwhile; ?>
 
 	</ul>
 	<?php if ( function_exists( 'page_navi' ) ) {
-				page_navi( 'items=5&amp;show_num=1&amp;num_position=after' ); }
-			else {
-				echo '<div class="navigation">';
-				echo '<div class="alignleft">';
-					previous_posts_link( '&laquo; Previous ' );
-				echo '</div>';
-				echo '<div class="alignright">';
-					next_posts_link( 'Next &raquo;', '' );
-				echo '</div>';
-			} ?>
+		page_navi( 'items=5&amp;show_num=1&amp;num_position=after' ); }
+	else {
+		echo '<div class="navigation">';
+			echo '<div class="alignleft">';
+				previous_posts_link( '&laquo; Previous ' );
+			echo '</div>';
+			echo '<div class="alignright">';
+				next_posts_link( 'Next &raquo;', '' );
+			echo '</div>';
+		echo "</div>";
+	}
+	?>
 
 
 <?php else : ?>
