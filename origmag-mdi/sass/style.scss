@@ -38,7 +38,7 @@
 		content: '';
 	}
 	li.mdi-menu-button { // styling the subscribe button on main menu.
-		background-color:  #7fda9a;
+		background-color:  $subscribe-hilite;
 		a {
 			padding-left: 7px;
 			padding-right: 7px;
@@ -50,7 +50,15 @@
 		font-family: "Roboto Condensed";
 	}
 }
-
+/* mobile Menu */
+#nav-list {
+	li.mdi-menu-button {
+		background-color: $subscribe-hilite;
+		a {
+			color: black;
+		}
+	}
+}
 #nav.prl-navbar {
 	.prl-container .nav-wrapper {
 		border-top: none;

@@ -724,6 +724,12 @@ article .eaihome-img {
     font-size: 18px;
     font-family: "Roboto Condensed"; }
 
+/* mobile Menu */
+#nav-list li.mdi-menu-button {
+  background-color: #7fda9a; }
+  #nav-list li.mdi-menu-button a {
+    color: black; }
+
 #nav.prl-navbar {
   margin-bottom: 0px; }
   #nav.prl-navbar .prl-container .nav-wrapper {
