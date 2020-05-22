@@ -624,17 +624,17 @@ Styling for the Our Town block on home page.
   margin-top: 20px; }
 
 .ads_top.ad-container img,
-.eai-ad-container.eai-ad-across broadstreet-zone {
+.eai-ad-container.eai-ad-across broadstreet-zone img {
   -webkit-box-shadow: 5px 5px 15px 0px gray;
   -moz-box-shadow: 5px 5px 15px 0px gray;
   box-shadow: 5px 5px 15px 0px grey; }
 
-.eai-ad-container.eai-ad-right broadstreet-zone {
+.eai-ad-container.eai-ad-right broadstreet-zone img {
   -webkit-box-shadow: 5px 5px 15px 0px gray;
   -moz-box-shadow: 5px 5px 15px 0px gray;
   box-shadow: 5px 5px 15px 0px grey; }
 
-.eai-ad-container.eai-ad-left broadstreet-zone {
+.eai-ad-container.eai-ad-left broadstreet-zone img {
   -webkit-box-shadow: -5px 5px 15px 0px gray;
   -moz-box-shadow: -5px 5px 15px 0px gray;
   box-shadow: -5px 5px 15px 0px grey; }

@@ -8,17 +8,17 @@
   margin-top: 20px;
 }
 .ads_top.ad-container img, // box shadown on ad img (instead of div s.t. if doent fit container looks ok.)
-.eai-ad-container.eai-ad-across broadstreet-zone {
+.eai-ad-container.eai-ad-across broadstreet-zone img {
   -webkit-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
   -moz-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
   box-shadow: 5px 5px 15px 0px grey;
 }
-.eai-ad-container.eai-ad-right broadstreet-zone {
+.eai-ad-container.eai-ad-right broadstreet-zone img {
   -webkit-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
   -moz-box-shadow: 5px 5px 15px 0px rgba(128,128,128,1);
   box-shadow: 5px 5px 15px 0px grey;
 }
-.eai-ad-container.eai-ad-left broadstreet-zone {
+.eai-ad-container.eai-ad-left broadstreet-zone img {
   -webkit-box-shadow: -5px 5px 15px 0px rgba(128,128,128,1);
   -moz-box-shadow: -5px 5px 15px 0px rgba(128,128,128,1);
   box-shadow: -5px 5px 15px 0px grey;
