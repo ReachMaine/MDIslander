@@ -60,6 +60,7 @@ global $theme_url, $prl_data; ?>
 			$image_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large');
 			if ($image_thumbnail) {
 				echo '<meta name="thumbnail" content="'.$image_thumbnail[0].'">';
+				echo '<meta property="og:image" content="'.$image_thumbnail[0].'">'; /* facebook share */
 			} else {
 				echo '<meta name="thumbnail" content="https://www.mdislander.com/wp-content/themes/origmag-mdi/images/ogi-mdi.jpg">';
 				echo '<meta property="og:image" content="https://www.mdislander.com/wp-content/themes/origmag-mdi/images/ogi-mdi.jpg">';
