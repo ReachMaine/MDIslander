@@ -1,23 +1,7 @@
 <?php /*
 	Mods:
-		12Aug2014 - Move Masthead around, use image for youtube, add calendar for date.
-		9Sept2014 - take out search button & make saarch always show.
-		28Oct2014 - add data-cfasync="false" to broadscreet init js
-		22Dec2014 - move default og:image lower in script.
-		22Dec2014 - use home_url with params('', 'https') for search.
-		29Dec2014 - add login-link next to time
-		17Mar15 -zig - add meta name=thumbnail
-		31Jan16 - zig - add scripts for technavia paywall.
-		12Oct16 zig - remove https for search (for now)
-		7Nov16 zig - add topbar widget area.
-		8Nov16 zig - add google jsapi script for elections pie charts.
-		1Sept16 zig - take out pie chart google script. - only for electsion.
-		12Sept17 TimS - Added Vollkorn Google Font
-		13sept17 zig - change technavia scripts
-		6Nove17 zig - change references to reachdowneast.com to downeastmaine.com
-  	30Aug19 zig - only load paywall scripts & var for post
-		8Nov19 - zig remove broadstreet init - using plugin now.
-		18Dec19 - zig remove $current_site & fix dangling open <div>
+	4Dec2020 - removed ancient history
+	         - put tecnavia login back on pages
 */
 global $theme_url, $prl_data; ?>
 <!DOCTYPE html>
@@ -42,14 +26,11 @@ global $theme_url, $prl_data; ?>
 	<?php } ?>
 		<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">
     <?php /* technavia header script  */
-	/* if (!is_singular('post')) { 	?>
+	 if (!is_singular('post')) { 	?>
 		<script data-cfasync="false" type="text/javascript" >var ta_cat = "not_post"; </script>
-	<?php }  */ ?>
-	<?php /* zig 30 Aug 19 only add  paywall scripts on single posts  */
-	if ( is_singular('post') ) { ?>
-   	<script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script>
 	<?php } ?>
-	 <?php /* <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script> */ ?>
+   	<script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;service=onstop&amp;v=0"></script>
+
 <?php wp_head();?>
 	<?php if ( is_home() || is_front_page() )  { ?>
     	<meta http-equiv='Cache-Control' content='no-cache'>
@@ -119,7 +100,7 @@ $body_class = array('Boxed'=>'site-boxed', 'Wide'=>'site-wide');
 					<?php  } if($prl_data['header_time']!='Disable'){  ?>
 					<span class="prl-header-time"><a href="https://www.downeastmaine.com/calendar/events/today/"><i class="fa fa-calendar"></i><?php echo date('l');?> - <?php echo date('M d, Y');?></a></span>
 					<?php } ?>
-					<?php if (is_singular('post')) { echo eai_technav_loginmenu();} /* zig only o need to login if post */ ?>
+					<?php  echo eai_technav_loginmenu();  ?>
 				</div>
 				<div class="prl-header-social">
 					<?php if($prl_data['header_facebook']!=''){?><a href="<?php echo $prl_data['header_facebook'];?>" class="fa fa-facebook" title="Facebook" target="_blank"></a><?php }?>
