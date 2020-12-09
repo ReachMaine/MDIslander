@@ -8,6 +8,7 @@ $photo-credit-color: #999;
 $mdilinkcolor: #00839c;
 $button-color: #00829b;
 $subscribe-hilite: #7fda9a;
+$mdi-teal: #00839c;
 // Background colors:
 $bkgoundContent: #FFFFFF; //
 $menuBarbkg: #D14719; //
@@ -18,7 +19,7 @@ $breakingnews-background: #f2f4f8;
 $yellow-page-bkg: rgba(255, 255, 102, 0.67);
 
 $weatherborder: #1E73BE;
-$widget-titlecolor: #1E73BE;
+$widget-titlecolor: #00839c;
 $footer-widgets-background:  #dcf2f6; // #dcf2f6; light blue // #e2e2e2;
 $footer-widgets-link-color: #484848;
 $slider-background: #0D365A; // #5B7F9E; // #1E73BE;
@@ -54,4 +55,23 @@ i.fa-linkedin-square {
         color: #ececec;
         text-decoration: none;
     }
+}
+
+
+.eai-wtitle-teal  { // widget title blue
+  .widget-title,
+  .prl-block-title {
+    background-color: $mdi-teal;
+    color: white!important;
+    border-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    a {
+      color: white;
+    }
+  }
+}
+.eai-wborder-teal {  // widget border blue.
+  border: 1px solid $mdi-teal;
+  border-radius: 0px;
 }
