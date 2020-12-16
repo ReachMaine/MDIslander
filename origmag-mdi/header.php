@@ -55,7 +55,7 @@ $body_class = array('Boxed'=>'site-boxed', 'Wide'=>'site-wide');
 <body <?php body_class($body_class[$prl_data['site_style']]); ?>>
 <?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 <?php if ( !is_user_logged_in() ) { ?>
-	<script data-cfasync="false" type="text/javascript" src="//ellsworthamerican-me-pw.newsmemory.com/?meter&amp;v=0"></script>
+	<script data-cfasync="false" type="text/javascript" src="//mountdesertislander-me-pw.newsmemory.com/?meter&amp;v=0"></script>
 <?php } ?>
 <div id="topbar"><?php if ( is_active_sidebar( 'topbar') ) { 	dynamic_sidebar( 'topbar' );	}  ?></div>
 <div class="site-wrapper">
