@@ -25,7 +25,39 @@
 @import "partials/eaihome";
 
 /* =Theme customization starts here */
-
+#topbar {
+	.msm-coastal-menu { // container
+		background-color: #e4e4e4;
+		text-align: center;
+		.widget_nav_menu {
+			padding-top: 6px;
+			padding-bottom: 6px;
+			max-width: 1140px;
+			margin:auto;
+			.widgettitle {
+				text-align: left;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 18px;
+				display: inline-block;
+				margin-bottom: 0px;
+			}
+			.menu-msm-papers-container {
+				display: inline-flex;
+				ul.menu {
+					display: flex;
+					list-style: none;
+					li {
+						padding: 0px 8px;
+						a:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 /* Main Menu */
 #nav.prl-navbar #sf-menu {
 	padding: 0;
