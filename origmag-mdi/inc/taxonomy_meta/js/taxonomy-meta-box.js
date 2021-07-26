@@ -22,24 +22,24 @@ jQuery(document).ready(function($) {
 	  ee.refresh();
 	});
 	});
-  
+
 	// Upload WP 3.5
 	var my_original_editor = window.send_to_editor;
-	$('.custom_media_upload').live("click",function() {
+	$('.custom_media_upload').on("click",function() {
 
 		var send_attachment_bkp = wp.media.editor.send.attachment;
 		var formfield = $(this).prev('input').attr('name');
 		wp.media.editor.send.attachment = function(props, attachment) {
-	
+
 			$('.custom_media_image').attr('src', attachment.url);
 			$('#' + formfield).val(attachment.url);
-			
+
 			wp.media.editor.send.attachment = send_attachment_bkp;
 		}
-	
+
 		wp.media.editor.open();
 		window.send_to_editor = my_original_editor;
-		return false;       
+		return false;
 	});
 
 });
